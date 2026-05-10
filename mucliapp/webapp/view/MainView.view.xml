@@ -1,7 +1,41 @@
 <mvc:View controllerName="mucliapp.controller.MainView"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    <Page id="page" title="{i18n>title}" backgroundDesign="Solid">
+        <content>
+            <HBox class="employeePageContent">
+                <VBox class="employeeTableWrapper">
+                    <Table id="employeeTable"
+                        items="{employees>/employees}"
+                        sticky="ColumnHeaders,HeaderToolbar"
+                        class="sapUiResponsiveContentPadding">
+                        <headerToolbar>
+                            <Toolbar>
+                                <Title text="Employee List" level="H4"/>
+                                <ToolbarSpacer/>
+                                <SearchField
+                                    width="16rem"
+                                    placeholder="Filter by Department"
+                                    liveChange=".onDepartmentSearch"/>
+                            </Toolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column width="10rem"><Text text="Employee ID"/></Column>
+                            <Column><Text text="Name"/></Column>
+                            <Column><Text text="Department"/></Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <ObjectIdentifier title="{employees>employeeId}"/>
+                                    <Text text="{employees>name}"/>
+                                    <Text text="{employees>department}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+            </HBox>
+        </content>
     </Page>
 </mvc:View>

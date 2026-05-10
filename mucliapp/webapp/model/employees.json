@@ -1,0 +1,9 @@
+{
+  "employees": [
+    { "employeeId": "E001", "name": "Alice Johnson",  "department": "Engineering" },
+    { "employeeId": "E002", "name": "Bob Smith",      "department": "Marketing" },
+    { "employeeId": "E003", "name": "Carol Davis",    "department": "Human Resources" },
+    { "employeeId": "E004", "name": "David Lee",      "department": "Finance" },
+    { "employeeId": "E005", "name": "Eva Martinez",   "department": "Engineering" }
+  ]
+}
