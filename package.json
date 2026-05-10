@@ -1,0 +1,17 @@
+{
+    "name": "com.mkr.mymkrprojectclaude",
+    "scripts": {
+        "build": "mbt build --mtar com.mkr.mymkrprojectclaude.mtar",
+        "build:workspaces": "npm run build --workspaces --if-present",
+        "deploy": "cf deploy mta_archives/com.mkr.mymkrprojectclaude.mtar --retries 0",
+        "lint": "npm run lint --workspaces --if-present",
+        "ui5lint": "npm run ui5lint --workspaces --if-present",
+        "start:mucliapp": "npm start --workspace mucliapp"
+    },
+    "dependencies": {
+        "mbt": "^1"
+    },
+    "workspaces": [
+        "mucliapp"
+    ]
+}

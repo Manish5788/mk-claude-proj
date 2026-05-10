@@ -1,0 +1,78 @@
+_schema-version: "3.2"
+ID: com.mkr.mymkrprojectclaude
+version: 0.0.1
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install
+        - npm run build:workspaces
+modules:
+  - name: com.mkr.mymkrprojectclaude-destination-content
+    type: com.sap.application.content
+    requires:
+      - name: com.mkr.mymkrprojectclaude-auth
+      - name: com.mkr.mymkrprojectclaude-html-repo-host
+      - name: com.mkr.mymkrprojectclaude-destination-service
+        parameters:
+          content-target: true
+    parameters:
+      content:
+        instance:
+          existing_destinations_policy: update
+          destinations:
+            - Name: com.mkr.mymkrprojectclaude-html-repo-host
+              ServiceInstanceName: com.mkr.mymkrprojectclaude-html-repo-host
+              ServiceKeyName: com.mkr.mymkrprojectclaude-html-repo-host-key
+              sap.cloud.service: basic.service
+            - Name: com.mkr.mymkrprojectclaude-auth
+              ServiceInstanceName: com.mkr.mymkrprojectclaude-auth
+              ServiceKeyName: com.mkr.mymkrprojectclaude-auth-key
+              sap.cloud.service: basic.service
+              Authentication: OAuth2UserTokenExchange
+    build-parameters:
+      no-source: true
+  - name: com.mkr.mymkrprojectclaude-ui-deployer
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: com.mkr.mymkrprojectclaude-html-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - dist/mucliapp-content.zip
+          name: mucliapp
+          target-path: resources/
+  - name: mucliapp
+    type: html5
+    path: mucliapp
+    build-parameters:
+      supported-platforms: []
+resources:
+  - name: com.mkr.mymkrprojectclaude-destination-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-name: com.mkr.mymkrprojectclaude-destination-service
+      service-plan: lite
+      config:
+        HTML5Runtime_enabled: true
+        version: 0.0.1
+  - name: com.mkr.mymkrprojectclaude-html-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+      service-keys:
+        - name: com.mkr.mymkrprojectclaude-html-repo-host-key
+  - name: com.mkr.mymkrprojectclaude-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa
+      service-plan: application
+      service-keys:
+        - name: com.mkr.mymkrprojectclaude-auth-key

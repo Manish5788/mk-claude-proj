@@ -1,0 +1,13 @@
+{
+  "generator-ui5-project": {
+    "namespaceUI5": "com.mkr",
+    "projectName": "mymkrprojectclaude",
+    "uimoduleName": "mucliapp",
+    "enableFPM": false,
+    "platform": "SAP HTML5 Application Repository Service",
+    "ui5Libs": "Content delivery network (SAPUI5)",
+    "newDir": false,
+    "initRepo": true,
+    "projectId": "com.mkr.mymkrprojectclaude"
+  }
+}
