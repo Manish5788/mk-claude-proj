@@ -13,5 +13,8 @@
     },
     "workspaces": [
         "mucliapp"
-    ]
+    ],
+    "devDependencies": {
+        "@ui5/cli": "^4.0.52"
+    }
 }
