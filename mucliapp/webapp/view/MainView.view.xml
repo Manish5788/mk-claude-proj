@@ -8,6 +8,9 @@
 
         <f:title>
             <f:DynamicPageTitle>
+                <f:navigationActions>
+                    <Button icon="sap-icon://home" press=".onNavToOverview" type="Transparent" tooltip="Home"/>
+                </f:navigationActions>
                 <f:heading>
                     <Title text="Employee Directory" level="H2"/>
                 </f:heading>

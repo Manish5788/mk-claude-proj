@@ -38,7 +38,8 @@
             "libs": {
                 "sap.m": {},
                 "sap.ui.core": {},
-                "sap.f": {}
+                "sap.f": {},
+                "sap.uxap": {}
             }
         },
         "contentDensities": {
@@ -72,21 +73,29 @@
             },
             "routes": [
                 {
-                    "name": "RouteMainView",
+                    "name": "RouteOverviewView",
                     "pattern": ":?query:",
-                    "target": [
-                        "TargetMainView"
-                    ]
+                    "target": [ "TargetOverviewView" ]
+                },
+                {
+                    "name": "RouteMainView",
+                    "pattern": "employees:?query:",
+                    "target": [ "TargetMainView" ]
                 },
                 {
                     "name": "RouteProjectView",
                     "pattern": "projects/{employeeId}",
-                    "target": [
-                        "TargetProjectView"
-                    ]
+                    "target": [ "TargetProjectView" ]
                 }
             ],
             "targets": {
+                "TargetOverviewView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "OverviewView",
+                    "viewName": "OverviewView"
+                },
                 "TargetMainView": {
                     "viewType": "XML",
                     "transition": "slide",

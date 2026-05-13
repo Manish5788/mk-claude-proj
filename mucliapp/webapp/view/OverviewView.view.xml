@@ -1,0 +1,185 @@
+<mvc:View controllerName="mucliapp.controller.OverviewView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    displayBlock="true">
+
+    <uxap:ObjectPageLayout id="overviewPage"
+        alwaysShowContentHeader="false"
+        showTitleInHeaderContent="true"
+        upperCaseAnchorBar="false">
+
+        <!-- ═══════════════════════════════════════════════════════
+             HEADER TITLE  (sticky — stays visible when scrolled)
+             ═══════════════════════════════════════════════════════ -->
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle>
+
+                <uxap:heading>
+                    <Title text="Employee &amp; Project Hub" level="H1" wrapping="true"/>
+                </uxap:heading>
+                <uxap:snappedHeading>
+                    <Title text="Employee &amp; Project Hub" level="H3"/>
+                </uxap:snappedHeading>
+
+                <uxap:expandedContent>
+                    <Label text="Internal workforce and project tracking platform · mucliapp v0.0.1"/>
+                </uxap:expandedContent>
+                <uxap:snappedContent>
+                    <Label text="Internal workforce and project tracking platform"/>
+                </uxap:snappedContent>
+
+                <uxap:actions>
+                    <Button text="Employees" icon="sap-icon://group"
+                        type="Emphasized" press=".onNavToEmployees"/>
+                </uxap:actions>
+
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+
+        <!-- ═══════════════════════════════════════════════════════
+             HEADER CONTENT  (collapsible info strip)
+             ═══════════════════════════════════════════════════════ -->
+        <uxap:headerContent>
+            <FlexBox wrap="Wrap" alignItems="Center">
+                <VBox class="sapUiMediumMarginEnd">
+                    <ObjectAttribute title="Total Employees" text="{overview>/totalEmployees}"/>
+                    <ObjectAttribute title="Departments"     text="{overview>/totalDepartments}"/>
+                </VBox>
+                <VBox class="sapUiMediumMarginEnd">
+                    <ObjectAttribute title="Total Projects"  text="{overview>/totalProjects}"/>
+                    <ObjectAttribute title="Active"          text="{overview>/activeProjects}"/>
+                </VBox>
+                <VBox>
+                    <ObjectAttribute title="Completed"   text="{overview>/completedProjects}"/>
+                    <ObjectAttribute title="In Planning" text="{overview>/planningProjects}"/>
+                </VBox>
+            </FlexBox>
+        </uxap:headerContent>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTIONS
+             ═══════════════════════════════════════════════════════ -->
+        <uxap:sections>
+
+            <!-- 1. Key Metrics -->
+            <uxap:ObjectPageSection id="metricsSection" title="Key Metrics" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <FlexBox wrap="Wrap">
+                                <GenericTile header="Total Employees" subheader="All departments"
+                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <tileContent><TileContent><content>
+                                        <NumericContent value="{overview>/totalEmployees}"
+                                            icon="sap-icon://group" withMargin="false"/>
+                                    </content></TileContent></tileContent>
+                                </GenericTile>
+                                <GenericTile header="Total Projects" subheader="All statuses"
+                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <tileContent><TileContent><content>
+                                        <NumericContent value="{overview>/totalProjects}"
+                                            icon="sap-icon://project-definition-triangle" withMargin="false"/>
+                                    </content></TileContent></tileContent>
+                                </GenericTile>
+                                <GenericTile header="Active Projects" subheader="In Progress"
+                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <tileContent><TileContent><content>
+                                        <NumericContent value="{overview>/activeProjects}"
+                                            icon="sap-icon://status-in-process" valueColor="Critical" withMargin="false"/>
+                                    </content></TileContent></tileContent>
+                                </GenericTile>
+                                <GenericTile header="Completed" subheader="This period"
+                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <tileContent><TileContent><content>
+                                        <NumericContent value="{overview>/completedProjects}"
+                                            icon="sap-icon://accept" valueColor="Good" withMargin="false"/>
+                                    </content></TileContent></tileContent>
+                                </GenericTile>
+                                <GenericTile header="In Planning" subheader="Upcoming"
+                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <tileContent><TileContent><content>
+                                        <NumericContent value="{overview>/planningProjects}"
+                                            icon="sap-icon://pending" withMargin="false"/>
+                                    </content></TileContent></tileContent>
+                                </GenericTile>
+                                <GenericTile header="Departments" subheader="Across company"
+                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <tileContent><TileContent><content>
+                                        <NumericContent value="{overview>/totalDepartments}"
+                                            icon="sap-icon://org-chart" withMargin="false"/>
+                                    </content></TileContent></tileContent>
+                                </GenericTile>
+                            </FlexBox>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- 2. Departments -->
+            <uxap:ObjectPageSection id="deptSection" title="Departments" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <Table id="deptTable"
+                                items="{overview>/departments}"
+                                alternateRowColors="true"
+                                sticky="ColumnHeaders">
+                                <columns>
+                                    <Column><Text text="Department"/></Column>
+                                    <Column hAlign="Center" width="10rem"><Text text="Employees"/></Column>
+                                    <Column hAlign="Center" width="10rem"><Text text="Active Projects"/></Column>
+                                    <Column hAlign="Center" width="10rem"><Text text="Completed"/></Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Navigation" press=".onDeptPress">
+                                        <cells>
+                                            <ObjectIdentifier title="{overview>name}" titleActive="false"/>
+                                            <ObjectNumber number="{overview>employeeCount}" emphasized="false"/>
+                                            <ObjectStatus text="{overview>activeProjects}"  state="Warning"/>
+                                            <ObjectStatus text="{overview>completedProjects}" state="Success"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- 3. Active Projects snapshot -->
+            <uxap:ObjectPageSection id="projectsSection" title="Active Projects" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <Table id="activeProjectsTable"
+                                items="{overview>/activeProjectsList}"
+                                alternateRowColors="true"
+                                sticky="ColumnHeaders">
+                                <columns>
+                                    <Column width="8rem"><Text text="Project ID"/></Column>
+                                    <Column><Text text="Project Name"/></Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Lead"/></Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Department"/></Column>
+                                    <Column minScreenWidth="Desktop" demandPopin="true"><Text text="Due Date"/></Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <ObjectIdentifier title="{overview>projectId}"/>
+                                            <ObjectIdentifier title="{overview>projectName}" titleActive="false"/>
+                                            <Text text="{overview>lead}"/>
+                                            <Text text="{overview>team}"/>
+                                            <Text text="{overview>dueDate}"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>
