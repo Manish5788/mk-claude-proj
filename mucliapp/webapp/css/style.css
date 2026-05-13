@@ -20,6 +20,17 @@
     border-bottom: 2px solid var(--sapList_BorderColor, #e5e5e5);
 }
 
+/* Tag chips in ProjectDetailView */
+.mucliappTag.sapMBtn {
+    border-radius: 1rem;
+    margin: 0.25rem;
+}
+.mucliappTag.sapMBtn .sapMBtnInner {
+    border-radius: 1rem;
+    padding: 0 0.75rem;
+    min-width: unset;
+}
+
 /* ObjectStatus inverted badges — slightly rounder corners for a chip look */
 .sapMObjStatusInverted .sapMObjStatusText {
     border-radius: 0.75rem;

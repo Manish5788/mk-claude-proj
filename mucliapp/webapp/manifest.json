@@ -86,6 +86,11 @@
                     "name": "RouteProjectView",
                     "pattern": "projects/{employeeId}",
                     "target": [ "TargetProjectView" ]
+                },
+                {
+                    "name": "RouteProjectDetailView",
+                    "pattern": "projects/{employeeId}/{projectId}",
+                    "target": [ "TargetProjectDetailView" ]
                 }
             ],
             "targets": {
@@ -109,6 +114,13 @@
                     "clearControlAggregation": false,
                     "viewId": "ProjectView",
                     "viewName": "ProjectView"
+                },
+                "TargetProjectDetailView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "ProjectDetailView",
+                    "viewName": "ProjectDetailView"
                 }
             }
         },

@@ -1,57 +1,972 @@
 {
   "projects": [
-    { "projectId": "P001", "projectName": "UI5 Dashboard Redesign",         "status": "In Progress", "team": "Engineering",      "lead": "Alice Johnson",  "dueDate": "2026-07-31" },
-    { "projectId": "P002", "projectName": "Q3 Marketing Campaign",          "status": "Planning",    "team": "Marketing",        "lead": "Bob Smith",      "dueDate": "2026-06-15" },
-    { "projectId": "P003", "projectName": "HR Policy Overhaul",             "status": "Completed",   "team": "Human Resources",  "lead": "Carol Davis",    "dueDate": "2026-04-30" },
-    { "projectId": "P004", "projectName": "Annual Budget Review",           "status": "In Progress", "team": "Finance",          "lead": "David Lee",      "dueDate": "2026-05-31" },
-    { "projectId": "P005", "projectName": "Cloud Migration Phase 2",        "status": "Planning",    "team": "Engineering",      "lead": "Eva Martinez",   "dueDate": "2026-09-30" },
-    { "projectId": "P006", "projectName": "Customer Portal v2",             "status": "In Progress", "team": "Engineering",      "lead": "Alice Johnson",  "dueDate": "2026-08-15" },
-    { "projectId": "P007", "projectName": "Brand Refresh",                  "status": "Completed",   "team": "Marketing",        "lead": "Bob Smith",      "dueDate": "2026-03-20" },
-    { "projectId": "P008", "projectName": "Enterprise Sales Expansion",     "status": "In Progress", "team": "Sales",            "lead": "Frank Wilson",   "dueDate": "2026-06-30" },
-    { "projectId": "P009", "projectName": "API Gateway Upgrade",            "status": "In Progress", "team": "Engineering",      "lead": "Grace Kim",      "dueDate": "2026-07-15" },
-    { "projectId": "P010", "projectName": "Cost Reduction Initiative",      "status": "Planning",    "team": "Finance",          "lead": "Henry Brown",    "dueDate": "2026-08-01" },
-    { "projectId": "P011", "projectName": "Social Media Strategy",          "status": "In Progress", "team": "Marketing",        "lead": "Irene Chen",     "dueDate": "2026-06-01" },
-    { "projectId": "P012", "projectName": "Warehouse Automation",           "status": "Planning",    "team": "Operations",       "lead": "James Taylor",   "dueDate": "2026-10-31" },
-    { "projectId": "P013", "projectName": "GDPR Compliance Audit",          "status": "In Progress", "team": "Legal",            "lead": "Karen White",    "dueDate": "2026-05-15" },
-    { "projectId": "P014", "projectName": "Microservices Refactor",         "status": "In Progress", "team": "Engineering",      "lead": "Liam Harris",    "dueDate": "2026-08-31" },
-    { "projectId": "P015", "projectName": "Product Roadmap Q3-Q4",          "status": "Planning",    "team": "Product",          "lead": "Mia Clark",      "dueDate": "2026-06-30" },
-    { "projectId": "P016", "projectName": "Regional Sales Drive",           "status": "In Progress", "team": "Sales",            "lead": "Nathan Lewis",   "dueDate": "2026-07-01" },
-    { "projectId": "P017", "projectName": "Employee Onboarding Revamp",     "status": "Completed",   "team": "Human Resources",  "lead": "Olivia Walker",  "dueDate": "2026-04-15" },
-    { "projectId": "P018", "projectName": "Supply Chain Optimisation",      "status": "In Progress", "team": "Operations",       "lead": "Peter Hall",     "dueDate": "2026-09-15" },
-    { "projectId": "P019", "projectName": "DevOps Pipeline Overhaul",       "status": "In Progress", "team": "Engineering",      "lead": "Quinn Allen",    "dueDate": "2026-07-31" },
-    { "projectId": "P020", "projectName": "Email Campaign Automation",      "status": "Planning",    "team": "Marketing",        "lead": "Rachel Young",   "dueDate": "2026-06-20" },
-    { "projectId": "P021", "projectName": "Tax Compliance System",          "status": "In Progress", "team": "Finance",          "lead": "Samuel King",    "dueDate": "2026-05-30" },
-    { "projectId": "P022", "projectName": "Feature Discovery Sprint",       "status": "In Progress", "team": "Product",          "lead": "Tina Scott",     "dueDate": "2026-06-15" },
-    { "projectId": "P023", "projectName": "Performance Monitoring Suite",   "status": "Planning",    "team": "Engineering",      "lead": "Umar Adams",     "dueDate": "2026-09-01" },
-    { "projectId": "P024", "projectName": "Contract Management System",     "status": "In Progress", "team": "Legal",            "lead": "Vera Nelson",    "dueDate": "2026-07-15" },
-    { "projectId": "P025", "projectName": "Partner Channel Programme",      "status": "Planning",    "team": "Sales",            "lead": "William Carter", "dueDate": "2026-08-15" },
-    { "projectId": "P026", "projectName": "Logistics Dashboard",            "status": "In Progress", "team": "Operations",       "lead": "Xena Mitchell",  "dueDate": "2026-08-01" },
-    { "projectId": "P027", "projectName": "AI Code Review Tool",            "status": "Planning",    "team": "Engineering",      "lead": "Yusuf Perez",    "dueDate": "2026-10-15" },
-    { "projectId": "P028", "projectName": "Mobile App v3",                  "status": "In Progress", "team": "Engineering",      "lead": "Alice Johnson",  "dueDate": "2026-09-30" },
-    { "projectId": "P029", "projectName": "Kubernetes Cluster Migration",   "status": "Completed",   "team": "Engineering",      "lead": "Eva Martinez",   "dueDate": "2026-03-31" },
-    { "projectId": "P030", "projectName": "Frontend Component Library",     "status": "In Progress", "team": "Engineering",      "lead": "Grace Kim",      "dueDate": "2026-08-30" },
-    { "projectId": "P031", "projectName": "CRM Integration",                "status": "Completed",   "team": "Sales",            "lead": "Frank Wilson",   "dueDate": "2026-04-01" },
-    { "projectId": "P032", "projectName": "Financial Forecasting Model",    "status": "Planning",    "team": "Finance",          "lead": "Henry Brown",    "dueDate": "2026-09-30" },
-    { "projectId": "P033", "projectName": "Influencer Marketing Platform",  "status": "In Progress", "team": "Marketing",        "lead": "Irene Chen",     "dueDate": "2026-07-30" },
-    { "projectId": "P034", "projectName": "Fleet Management System",        "status": "Planning",    "team": "Operations",       "lead": "James Taylor",   "dueDate": "2026-11-01" },
-    { "projectId": "P035", "projectName": "IP Portfolio Review",            "status": "Completed",   "team": "Legal",            "lead": "Karen White",    "dueDate": "2026-04-20" },
-    { "projectId": "P036", "projectName": "GraphQL API Layer",              "status": "In Progress", "team": "Engineering",      "lead": "Liam Harris",    "dueDate": "2026-09-15" },
-    { "projectId": "P037", "projectName": "UX Research Study",              "status": "Completed",   "team": "Product",          "lead": "Mia Clark",      "dueDate": "2026-04-10" },
-    { "projectId": "P038", "projectName": "Key Account Growth Plan",        "status": "In Progress", "team": "Sales",            "lead": "Nathan Lewis",   "dueDate": "2026-08-01" },
-    { "projectId": "P039", "projectName": "Diversity & Inclusion Programme","status": "In Progress", "team": "Human Resources",  "lead": "Olivia Walker",  "dueDate": "2026-09-01" },
-    { "projectId": "P040", "projectName": "Procurement Process Reform",     "status": "Planning",    "team": "Operations",       "lead": "Peter Hall",     "dueDate": "2026-10-01" },
-    { "projectId": "P041", "projectName": "CI/CD Maturity Programme",       "status": "Completed",   "team": "Engineering",      "lead": "Quinn Allen",    "dueDate": "2026-03-15" },
-    { "projectId": "P042", "projectName": "SEO Optimisation Project",       "status": "Planning",    "team": "Marketing",        "lead": "Rachel Young",   "dueDate": "2026-07-15" },
-    { "projectId": "P043", "projectName": "Payroll System Upgrade",         "status": "In Progress", "team": "Finance",          "lead": "Samuel King",    "dueDate": "2026-06-30" },
-    { "projectId": "P044", "projectName": "A/B Testing Framework",          "status": "Planning",    "team": "Product",          "lead": "Tina Scott",     "dueDate": "2026-07-31" },
-    { "projectId": "P045", "projectName": "Security Patch Automation",      "status": "In Progress", "team": "Engineering",      "lead": "Umar Adams",     "dueDate": "2026-07-01" },
-    { "projectId": "P046", "projectName": "Data Privacy Framework",         "status": "Planning",    "team": "Legal",            "lead": "Vera Nelson",    "dueDate": "2026-08-31" },
-    { "projectId": "P047", "projectName": "International Sales Expansion",  "status": "Planning",    "team": "Sales",            "lead": "William Carter", "dueDate": "2026-09-30" },
-    { "projectId": "P048", "projectName": "Real-Time Inventory Tracker",    "status": "In Progress", "team": "Operations",       "lead": "Xena Mitchell",  "dueDate": "2026-09-01" },
-    { "projectId": "P049", "projectName": "ML Model Deployment Pipeline",   "status": "Planning",    "team": "Engineering",      "lead": "Yusuf Perez",    "dueDate": "2026-11-30" },
-    { "projectId": "P050", "projectName": "Vendor Risk Assessment",         "status": "Completed",   "team": "Finance",          "lead": "David Lee",      "dueDate": "2026-04-25" },
-    { "projectId": "P051", "projectName": "Learning & Development Portal",  "status": "In Progress", "team": "Human Resources",  "lead": "Carol Davis",    "dueDate": "2026-08-15" },
-    { "projectId": "P052", "projectName": "Product Launch Campaign",        "status": "In Progress", "team": "Marketing",        "lead": "Bob Smith",      "dueDate": "2026-07-20" },
-    { "projectId": "P053", "projectName": "Observability Stack Setup",      "status": "Planning",    "team": "Engineering",      "lead": "Alice Johnson",  "dueDate": "2026-10-31" }
+    {
+      "projectId": "P001", "projectName": "UI5 Dashboard Redesign", "status": "In Progress",
+      "team": "Engineering", "lead": "Alice Johnson", "dueDate": "2026-07-31", "startDate": "2026-03-01",
+      "description": "Modernising the internal analytics dashboard with the sap_horizon theme, responsive DynamicPage layouts, and real-time KPI widgets connected to live OData feeds.",
+      "priority": "High", "budget": 120, "progress": 55,
+      "tags": ["UI5", "Fiori", "Frontend", "UX", "OData"],
+      "teamMembers": [
+        {"name": "Alice Johnson", "role": "Project Lead"},
+        {"name": "Grace Kim",     "role": "UI Developer"},
+        {"name": "Mia Clark",     "role": "UX Designer"},
+        {"name": "Liam Harris",   "role": "Backend Developer"}
+      ],
+      "milestones": [
+        {"title": "Kickoff & Requirements",  "date": "2026-03-07", "status": "Completed"},
+        {"title": "Wireframes Approved",     "date": "2026-04-10", "status": "Completed"},
+        {"title": "Development Phase 1",     "date": "2026-05-30", "status": "In Progress"},
+        {"title": "UAT & Go-Live",           "date": "2026-07-31", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P002", "projectName": "Q3 Marketing Campaign", "status": "Planning",
+      "team": "Marketing", "lead": "Bob Smith", "dueDate": "2026-06-15", "startDate": "2026-04-01",
+      "description": "Full-funnel Q3 campaign covering paid search, social, and email channels targeting mid-market B2B buyers across EMEA and North America.",
+      "priority": "Medium", "budget": 65, "progress": 15,
+      "tags": ["Campaign", "B2B", "EMEA", "Paid Search"],
+      "teamMembers": [
+        {"name": "Bob Smith",     "role": "Campaign Lead"},
+        {"name": "Irene Chen",    "role": "Social Media"},
+        {"name": "Rachel Young",  "role": "Content Strategist"}
+      ],
+      "milestones": [
+        {"title": "Strategy Sign-off",       "date": "2026-04-15", "status": "Completed"},
+        {"title": "Creative Production",     "date": "2026-05-10", "status": "In Progress"},
+        {"title": "Campaign Launch",         "date": "2026-05-25", "status": "Pending"},
+        {"title": "Performance Review",      "date": "2026-06-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P003", "projectName": "HR Policy Overhaul", "status": "Completed",
+      "team": "Human Resources", "lead": "Carol Davis", "dueDate": "2026-04-30", "startDate": "2025-12-01",
+      "description": "Full review and rewrite of all company HR policies to align with updated labour regulations, DEI commitments, and remote-work best practices.",
+      "priority": "Medium", "budget": 40, "progress": 100,
+      "tags": ["HR", "Policy", "Compliance", "Remote Work"],
+      "teamMembers": [
+        {"name": "Carol Davis",   "role": "Project Lead"},
+        {"name": "Olivia Walker", "role": "HR Specialist"},
+        {"name": "Karen White",   "role": "Legal Advisor"}
+      ],
+      "milestones": [
+        {"title": "Policy Audit",            "date": "2025-12-20", "status": "Completed"},
+        {"title": "Draft Review",            "date": "2026-02-15", "status": "Completed"},
+        {"title": "Stakeholder Sign-off",    "date": "2026-04-01", "status": "Completed"},
+        {"title": "Company-wide Rollout",    "date": "2026-04-30", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P004", "projectName": "Annual Budget Review", "status": "In Progress",
+      "team": "Finance", "lead": "David Lee", "dueDate": "2026-05-31", "startDate": "2026-02-01",
+      "description": "Comprehensive year-end budget variance analysis and FY2027 budget planning cycle covering all eight business units.",
+      "priority": "High", "budget": 30, "progress": 65,
+      "tags": ["Budget", "Finance", "Planning", "FY2027"],
+      "teamMembers": [
+        {"name": "David Lee",     "role": "Finance Lead"},
+        {"name": "Henry Brown",   "role": "Financial Analyst"},
+        {"name": "Samuel King",   "role": "Tax Specialist"}
+      ],
+      "milestones": [
+        {"title": "Data Collection",         "date": "2026-02-28", "status": "Completed"},
+        {"title": "Variance Analysis",       "date": "2026-04-01", "status": "Completed"},
+        {"title": "Draft Budget Submission", "date": "2026-05-15", "status": "In Progress"},
+        {"title": "Board Approval",          "date": "2026-05-31", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P005", "projectName": "Cloud Migration Phase 2", "status": "Planning",
+      "team": "Engineering", "lead": "Eva Martinez", "dueDate": "2026-09-30", "startDate": "2026-05-01",
+      "description": "Migrating the remaining on-premise microservices to AWS EKS, including data residency compliance for EU workloads and zero-downtime cutover procedures.",
+      "priority": "High", "budget": 250, "progress": 12,
+      "tags": ["Cloud", "AWS", "EKS", "Migration", "DevOps"],
+      "teamMembers": [
+        {"name": "Eva Martinez",  "role": "Cloud Architect"},
+        {"name": "Quinn Allen",   "role": "DevOps Engineer"},
+        {"name": "Umar Adams",    "role": "Security Engineer"},
+        {"name": "Yusuf Perez",   "role": "ML Infra Engineer"}
+      ],
+      "milestones": [
+        {"title": "Architecture Review",     "date": "2026-05-20", "status": "In Progress"},
+        {"title": "Dev Environment",         "date": "2026-06-30", "status": "Pending"},
+        {"title": "Staging Migration",       "date": "2026-08-15", "status": "Pending"},
+        {"title": "Production Cutover",      "date": "2026-09-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P006", "projectName": "Customer Portal v2", "status": "In Progress",
+      "team": "Engineering", "lead": "Alice Johnson", "dueDate": "2026-08-15", "startDate": "2026-02-15",
+      "description": "Next-generation self-service customer portal with SSO, real-time order tracking, document management, and a configurable reporting suite.",
+      "priority": "High", "budget": 180, "progress": 45,
+      "tags": ["Portal", "SSO", "Frontend", "UX", "Self-Service"],
+      "teamMembers": [
+        {"name": "Alice Johnson", "role": "Project Lead"},
+        {"name": "Liam Harris",   "role": "Full-Stack Developer"},
+        {"name": "Tina Scott",    "role": "Product Owner"},
+        {"name": "Grace Kim",     "role": "UI Developer"}
+      ],
+      "milestones": [
+        {"title": "Discovery & Scoping",     "date": "2026-03-01", "status": "Completed"},
+        {"title": "Design System",           "date": "2026-04-15", "status": "Completed"},
+        {"title": "Core Features Build",     "date": "2026-06-30", "status": "In Progress"},
+        {"title": "Beta Launch",             "date": "2026-08-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P007", "projectName": "Brand Refresh", "status": "Completed",
+      "team": "Marketing", "lead": "Bob Smith", "dueDate": "2026-03-20", "startDate": "2025-11-01",
+      "description": "Complete visual identity refresh including new logo, colour palette, typography system, and brand guidelines applied across all digital and print touchpoints.",
+      "priority": "High", "budget": 95, "progress": 100,
+      "tags": ["Brand", "Design", "Identity", "Marketing"],
+      "teamMembers": [
+        {"name": "Bob Smith",     "role": "Brand Lead"},
+        {"name": "Irene Chen",    "role": "Digital Designer"},
+        {"name": "Mia Clark",     "role": "UX Consultant"}
+      ],
+      "milestones": [
+        {"title": "Brand Audit",             "date": "2025-11-20", "status": "Completed"},
+        {"title": "Concept Presentation",    "date": "2026-01-10", "status": "Completed"},
+        {"title": "Design Finalisation",     "date": "2026-02-28", "status": "Completed"},
+        {"title": "Full Rollout",            "date": "2026-03-20", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P008", "projectName": "Enterprise Sales Expansion", "status": "In Progress",
+      "team": "Sales", "lead": "Frank Wilson", "dueDate": "2026-06-30", "startDate": "2026-01-15",
+      "description": "Expanding enterprise sales coverage into three new verticals — manufacturing, retail, and public sector — with dedicated account teams and tailored collateral.",
+      "priority": "High", "budget": 130, "progress": 40,
+      "tags": ["Sales", "Enterprise", "Verticals", "B2B"],
+      "teamMembers": [
+        {"name": "Frank Wilson",  "role": "Sales Lead"},
+        {"name": "Nathan Lewis",  "role": "Account Executive"},
+        {"name": "William Carter","role": "Channel Manager"}
+      ],
+      "milestones": [
+        {"title": "Market Analysis",         "date": "2026-02-15", "status": "Completed"},
+        {"title": "Team Onboarding",         "date": "2026-03-31", "status": "Completed"},
+        {"title": "First Deals Pipeline",    "date": "2026-05-30", "status": "In Progress"},
+        {"title": "Revenue Target Q2",       "date": "2026-06-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P009", "projectName": "API Gateway Upgrade", "status": "In Progress",
+      "team": "Engineering", "lead": "Grace Kim", "dueDate": "2026-07-15", "startDate": "2026-02-01",
+      "description": "Replacing the legacy REST gateway with Kong Enterprise, adding rate limiting, JWT authentication, request tracing, and a developer portal.",
+      "priority": "High", "budget": 90, "progress": 55,
+      "tags": ["API", "Kong", "Gateway", "Security", "Backend"],
+      "teamMembers": [
+        {"name": "Grace Kim",     "role": "Tech Lead"},
+        {"name": "Quinn Allen",   "role": "DevOps Engineer"},
+        {"name": "Umar Adams",    "role": "Security Review"}
+      ],
+      "milestones": [
+        {"title": "PoC & Vendor Selection",  "date": "2026-02-28", "status": "Completed"},
+        {"title": "Dev Environment Setup",   "date": "2026-04-15", "status": "Completed"},
+        {"title": "Service Migration",       "date": "2026-06-15", "status": "In Progress"},
+        {"title": "Prod Cutover",            "date": "2026-07-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P010", "projectName": "Cost Reduction Initiative", "status": "Planning",
+      "team": "Finance", "lead": "Henry Brown", "dueDate": "2026-08-01", "startDate": "2026-04-15",
+      "description": "Cross-functional initiative targeting 12% operational cost reduction through vendor renegotiation, process automation, and headcount rebalancing.",
+      "priority": "Medium", "budget": 35, "progress": 8,
+      "tags": ["Cost Reduction", "Finance", "Efficiency", "Automation"],
+      "teamMembers": [
+        {"name": "Henry Brown",   "role": "Programme Lead"},
+        {"name": "David Lee",     "role": "Finance Director"},
+        {"name": "James Taylor",  "role": "Operations Advisor"}
+      ],
+      "milestones": [
+        {"title": "Baseline Assessment",     "date": "2026-05-01", "status": "In Progress"},
+        {"title": "Savings Roadmap",         "date": "2026-06-01", "status": "Pending"},
+        {"title": "Vendor Negotiations",     "date": "2026-07-01", "status": "Pending"},
+        {"title": "Savings Realised",        "date": "2026-08-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P011", "projectName": "Social Media Strategy", "status": "In Progress",
+      "team": "Marketing", "lead": "Irene Chen", "dueDate": "2026-06-01", "startDate": "2026-02-01",
+      "description": "Developing and executing an integrated organic + paid social strategy across LinkedIn, X, and Instagram, with an influencer programme for product launches.",
+      "priority": "Medium", "budget": 50, "progress": 70,
+      "tags": ["Social Media", "LinkedIn", "Influencer", "Content"],
+      "teamMembers": [
+        {"name": "Irene Chen",    "role": "Strategy Lead"},
+        {"name": "Bob Smith",     "role": "Brand Oversight"},
+        {"name": "Rachel Young",  "role": "Content Creator"}
+      ],
+      "milestones": [
+        {"title": "Audit & Benchmarking",    "date": "2026-02-20", "status": "Completed"},
+        {"title": "Strategy Deck Approved",  "date": "2026-03-15", "status": "Completed"},
+        {"title": "Content Calendar Live",   "date": "2026-04-30", "status": "Completed"},
+        {"title": "Q2 Performance Report",   "date": "2026-06-01", "status": "In Progress"}
+      ]
+    },
+    {
+      "projectId": "P012", "projectName": "Warehouse Automation", "status": "Planning",
+      "team": "Operations", "lead": "James Taylor", "dueDate": "2026-10-31", "startDate": "2026-05-01",
+      "description": "Deploying autonomous mobile robots (AMRs) and a new WMS in the main distribution centre to increase throughput by 40% and reduce pick errors.",
+      "priority": "High", "budget": 300, "progress": 10,
+      "tags": ["Automation", "Robotics", "WMS", "Logistics", "IoT"],
+      "teamMembers": [
+        {"name": "James Taylor",  "role": "Programme Lead"},
+        {"name": "Xena Mitchell", "role": "Systems Integrator"},
+        {"name": "Peter Hall",    "role": "Operations Manager"}
+      ],
+      "milestones": [
+        {"title": "Vendor Selection",        "date": "2026-05-31", "status": "In Progress"},
+        {"title": "Site Preparation",        "date": "2026-07-15", "status": "Pending"},
+        {"title": "Hardware Install",        "date": "2026-09-01", "status": "Pending"},
+        {"title": "Go-Live",                 "date": "2026-10-31", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P013", "projectName": "GDPR Compliance Audit", "status": "In Progress",
+      "team": "Legal", "lead": "Karen White", "dueDate": "2026-05-15", "startDate": "2026-01-20",
+      "description": "Comprehensive audit of all data processing activities, privacy notices, consent mechanisms, and data subject rights procedures to ensure GDPR compliance.",
+      "priority": "High", "budget": 55, "progress": 60,
+      "tags": ["GDPR", "Privacy", "Compliance", "Legal", "Audit"],
+      "teamMembers": [
+        {"name": "Karen White",   "role": "Lead Counsel"},
+        {"name": "Vera Nelson",   "role": "Data Privacy Specialist"},
+        {"name": "Carol Davis",   "role": "HR Data Liaison"}
+      ],
+      "milestones": [
+        {"title": "Data Mapping",            "date": "2026-02-28", "status": "Completed"},
+        {"title": "Gap Analysis",            "date": "2026-03-31", "status": "Completed"},
+        {"title": "Remediation Actions",     "date": "2026-05-01", "status": "In Progress"},
+        {"title": "DPA Sign-off",            "date": "2026-05-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P014", "projectName": "Microservices Refactor", "status": "In Progress",
+      "team": "Engineering", "lead": "Liam Harris", "dueDate": "2026-08-31", "startDate": "2026-02-01",
+      "description": "Breaking the monolithic order management application into 12 independently deployable microservices using domain-driven design and event-sourcing patterns.",
+      "priority": "High", "budget": 140, "progress": 50,
+      "tags": ["Microservices", "DDD", "Event Sourcing", "Architecture", "Backend"],
+      "teamMembers": [
+        {"name": "Liam Harris",   "role": "Architect"},
+        {"name": "Eva Martinez",  "role": "Platform Engineer"},
+        {"name": "Grace Kim",     "role": "API Design"},
+        {"name": "Quinn Allen",   "role": "DevOps"}
+      ],
+      "milestones": [
+        {"title": "Domain Modelling",        "date": "2026-03-01", "status": "Completed"},
+        {"title": "Service Extraction v1",   "date": "2026-05-01", "status": "Completed"},
+        {"title": "Service Extraction v2",   "date": "2026-07-01", "status": "In Progress"},
+        {"title": "Full Decommission",       "date": "2026-08-31", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P015", "projectName": "Product Roadmap Q3-Q4", "status": "Planning",
+      "team": "Product", "lead": "Mia Clark", "dueDate": "2026-06-30", "startDate": "2026-04-01",
+      "description": "Defining and aligning the product roadmap for H2 2026, incorporating customer feedback synthesis, competitive analysis, and engineering capacity planning.",
+      "priority": "High", "budget": 25, "progress": 20,
+      "tags": ["Roadmap", "Product Strategy", "Planning", "Q3", "Q4"],
+      "teamMembers": [
+        {"name": "Mia Clark",     "role": "Product Lead"},
+        {"name": "Tina Scott",    "role": "Product Manager"},
+        {"name": "Alice Johnson", "role": "Engineering Input"}
+      ],
+      "milestones": [
+        {"title": "Customer Research",       "date": "2026-04-30", "status": "Completed"},
+        {"title": "Competitive Analysis",    "date": "2026-05-20", "status": "In Progress"},
+        {"title": "Roadmap Draft",           "date": "2026-06-10", "status": "Pending"},
+        {"title": "Leadership Approval",     "date": "2026-06-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P016", "projectName": "Regional Sales Drive", "status": "In Progress",
+      "team": "Sales", "lead": "Nathan Lewis", "dueDate": "2026-07-01", "startDate": "2026-02-15",
+      "description": "Intensified sales effort in the DACH and Benelux regions, targeting 25% new logo growth via localised campaigns, partner events, and inside sales calls.",
+      "priority": "Medium", "budget": 75, "progress": 55,
+      "tags": ["Sales", "DACH", "Benelux", "Regional", "New Logos"],
+      "teamMembers": [
+        {"name": "Nathan Lewis",  "role": "Regional Lead"},
+        {"name": "Frank Wilson",  "role": "Sales Director"},
+        {"name": "William Carter","role": "Partner Manager"}
+      ],
+      "milestones": [
+        {"title": "Territory Planning",      "date": "2026-03-01", "status": "Completed"},
+        {"title": "Partner Onboarding",      "date": "2026-04-15", "status": "Completed"},
+        {"title": "Mid-Campaign Review",     "date": "2026-05-31", "status": "In Progress"},
+        {"title": "Target Achievement",      "date": "2026-07-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P017", "projectName": "Employee Onboarding Revamp", "status": "Completed",
+      "team": "Human Resources", "lead": "Olivia Walker", "dueDate": "2026-04-15", "startDate": "2025-12-15",
+      "description": "Redesigning the 90-day onboarding journey with a digital welcome portal, buddy system, structured check-ins, and role-specific learning paths.",
+      "priority": "Medium", "budget": 50, "progress": 100,
+      "tags": ["Onboarding", "HR", "L&D", "Employee Experience"],
+      "teamMembers": [
+        {"name": "Olivia Walker", "role": "HR Lead"},
+        {"name": "Carol Davis",   "role": "HR Director"},
+        {"name": "Tina Scott",    "role": "Portal Design"}
+      ],
+      "milestones": [
+        {"title": "Current-State Mapping",   "date": "2026-01-15", "status": "Completed"},
+        {"title": "Portal Development",      "date": "2026-02-28", "status": "Completed"},
+        {"title": "Pilot Programme",         "date": "2026-03-31", "status": "Completed"},
+        {"title": "Full Rollout",            "date": "2026-04-15", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P018", "projectName": "Supply Chain Optimisation", "status": "In Progress",
+      "team": "Operations", "lead": "Peter Hall", "dueDate": "2026-09-15", "startDate": "2026-01-10",
+      "description": "End-to-end supply chain redesign covering supplier consolidation, demand forecasting model improvements, and a control-tower dashboard for real-time visibility.",
+      "priority": "High", "budget": 175, "progress": 50,
+      "tags": ["Supply Chain", "Forecasting", "Operations", "Dashboard"],
+      "teamMembers": [
+        {"name": "Peter Hall",    "role": "Programme Lead"},
+        {"name": "James Taylor",  "role": "Logistics Manager"},
+        {"name": "Henry Brown",   "role": "Finance Liaison"},
+        {"name": "Xena Mitchell", "role": "Systems Analyst"}
+      ],
+      "milestones": [
+        {"title": "Supplier Assessment",     "date": "2026-02-28", "status": "Completed"},
+        {"title": "Forecasting Model",       "date": "2026-05-01", "status": "Completed"},
+        {"title": "Control Tower Build",     "date": "2026-07-31", "status": "In Progress"},
+        {"title": "Go-Live",                 "date": "2026-09-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P019", "projectName": "DevOps Pipeline Overhaul", "status": "In Progress",
+      "team": "Engineering", "lead": "Quinn Allen", "dueDate": "2026-07-31", "startDate": "2026-01-20",
+      "description": "Rebuilding CI/CD pipelines across all 30 repositories using GitHub Actions, ArgoCD, and Helm charts, with automated security scanning and DORA metrics tracking.",
+      "priority": "High", "budget": 110, "progress": 65,
+      "tags": ["DevOps", "CI/CD", "GitHub Actions", "ArgoCD", "Helm"],
+      "teamMembers": [
+        {"name": "Quinn Allen",   "role": "DevOps Lead"},
+        {"name": "Umar Adams",    "role": "Security Engineer"},
+        {"name": "Eva Martinez",  "role": "Platform Review"},
+        {"name": "Liam Harris",   "role": "Dev Liaison"}
+      ],
+      "milestones": [
+        {"title": "Pipeline Audit",          "date": "2026-02-15", "status": "Completed"},
+        {"title": "Toolchain Migration",     "date": "2026-04-30", "status": "Completed"},
+        {"title": "Security Gates",          "date": "2026-06-15", "status": "In Progress"},
+        {"title": "DORA Baseline",           "date": "2026-07-31", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P020", "projectName": "Email Campaign Automation", "status": "Planning",
+      "team": "Marketing", "lead": "Rachel Young", "dueDate": "2026-06-20", "startDate": "2026-04-01",
+      "description": "Implementing HubSpot workflow automation for nurture sequences, lead scoring, and triggered lifecycle campaigns to reduce manual effort by 70%.",
+      "priority": "Medium", "budget": 45, "progress": 18,
+      "tags": ["Email", "HubSpot", "Automation", "Marketing Ops", "Nurture"],
+      "teamMembers": [
+        {"name": "Rachel Young",  "role": "Campaign Lead"},
+        {"name": "Irene Chen",    "role": "Digital Strategist"},
+        {"name": "Bob Smith",     "role": "Brand Oversight"}
+      ],
+      "milestones": [
+        {"title": "Platform Setup",          "date": "2026-04-20", "status": "Completed"},
+        {"title": "Workflow Design",         "date": "2026-05-15", "status": "In Progress"},
+        {"title": "Content Build",           "date": "2026-06-01", "status": "Pending"},
+        {"title": "Launch & Measure",        "date": "2026-06-20", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P021", "projectName": "Tax Compliance System", "status": "In Progress",
+      "team": "Finance", "lead": "Samuel King", "dueDate": "2026-05-30", "startDate": "2026-01-05",
+      "description": "Implementing a new tax compliance platform (Vertex O Series) to automate indirect tax calculations across 18 jurisdictions and reduce audit risk.",
+      "priority": "High", "budget": 95, "progress": 55,
+      "tags": ["Tax", "Compliance", "Vertex", "Finance", "ERP"],
+      "teamMembers": [
+        {"name": "Samuel King",   "role": "Finance Lead"},
+        {"name": "David Lee",     "role": "Finance Director"},
+        {"name": "Karen White",   "role": "Legal Counsel"},
+        {"name": "Vera Nelson",   "role": "Regulatory Advisor"}
+      ],
+      "milestones": [
+        {"title": "Requirements Gathering",  "date": "2026-02-01", "status": "Completed"},
+        {"title": "System Configuration",    "date": "2026-03-31", "status": "Completed"},
+        {"title": "UAT & Data Validation",   "date": "2026-05-10", "status": "In Progress"},
+        {"title": "Production Go-Live",      "date": "2026-05-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P022", "projectName": "Feature Discovery Sprint", "status": "In Progress",
+      "team": "Product", "lead": "Tina Scott", "dueDate": "2026-06-15", "startDate": "2026-03-01",
+      "description": "Six-week discovery sprint using Jobs-to-be-Done interviews, journey mapping, and prototype testing to uncover the highest-value features for the H2 roadmap.",
+      "priority": "Medium", "budget": 35, "progress": 60,
+      "tags": ["JTBD", "Discovery", "Prototyping", "UX Research", "Product"],
+      "teamMembers": [
+        {"name": "Tina Scott",    "role": "Product Manager"},
+        {"name": "Mia Clark",     "role": "UX Researcher"},
+        {"name": "Alice Johnson", "role": "Engineering Feasibility"}
+      ],
+      "milestones": [
+        {"title": "Interview Recruitment",   "date": "2026-03-15", "status": "Completed"},
+        {"title": "Interviews Complete",     "date": "2026-04-15", "status": "Completed"},
+        {"title": "Synthesis & Prototypes",  "date": "2026-05-30", "status": "In Progress"},
+        {"title": "Readout to Leadership",   "date": "2026-06-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P023", "projectName": "Performance Monitoring Suite", "status": "Planning",
+      "team": "Engineering", "lead": "Umar Adams", "dueDate": "2026-09-01", "startDate": "2026-05-01",
+      "description": "Building a unified observability platform using Prometheus, Grafana, and OpenTelemetry to give all teams real-time visibility into application health and SLOs.",
+      "priority": "High", "budget": 120, "progress": 8,
+      "tags": ["Observability", "Prometheus", "Grafana", "SLO", "OpenTelemetry"],
+      "teamMembers": [
+        {"name": "Umar Adams",    "role": "Tech Lead"},
+        {"name": "Quinn Allen",   "role": "DevOps Support"},
+        {"name": "Yusuf Perez",   "role": "Infra Engineer"}
+      ],
+      "milestones": [
+        {"title": "Tool Evaluation",         "date": "2026-05-31", "status": "In Progress"},
+        {"title": "Pilot Deployment",        "date": "2026-07-01", "status": "Pending"},
+        {"title": "Service Instrumentation", "date": "2026-08-15", "status": "Pending"},
+        {"title": "Dashboard Rollout",       "date": "2026-09-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P024", "projectName": "Contract Management System", "status": "In Progress",
+      "team": "Legal", "lead": "Vera Nelson", "dueDate": "2026-07-15", "startDate": "2026-02-01",
+      "description": "Deploying Ironclad CLM to centralise contract creation, negotiation workflows, e-signature, and expiry alerts across all business units.",
+      "priority": "Medium", "budget": 70, "progress": 55,
+      "tags": ["CLM", "Ironclad", "Legal Tech", "Contracts", "e-Signature"],
+      "teamMembers": [
+        {"name": "Vera Nelson",   "role": "Legal Tech Lead"},
+        {"name": "Karen White",   "role": "General Counsel"},
+        {"name": "Samuel King",   "role": "Finance Liaison"}
+      ],
+      "milestones": [
+        {"title": "Vendor Selection",        "date": "2026-02-28", "status": "Completed"},
+        {"title": "Configuration & Testing", "date": "2026-05-01", "status": "Completed"},
+        {"title": "Pilot with Legal Team",   "date": "2026-06-15", "status": "In Progress"},
+        {"title": "Company-wide Rollout",    "date": "2026-07-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P025", "projectName": "Partner Channel Programme", "status": "Planning",
+      "team": "Sales", "lead": "William Carter", "dueDate": "2026-08-15", "startDate": "2026-04-15",
+      "description": "Establishing a tiered partner ecosystem (Silver/Gold/Platinum) with deal registration, MDF allocation, a co-sell playbook, and a partner portal.",
+      "priority": "Medium", "budget": 85, "progress": 15,
+      "tags": ["Partners", "Channel", "MDF", "Ecosystem", "Sales Enablement"],
+      "teamMembers": [
+        {"name": "William Carter","role": "Channel Lead"},
+        {"name": "Frank Wilson",  "role": "Sales Director"},
+        {"name": "Nathan Lewis",  "role": "Partner Account Mgr"}
+      ],
+      "milestones": [
+        {"title": "Programme Design",        "date": "2026-05-01", "status": "In Progress"},
+        {"title": "Portal Development",      "date": "2026-06-15", "status": "Pending"},
+        {"title": "Partner Recruitment",     "date": "2026-07-31", "status": "Pending"},
+        {"title": "Soft Launch",             "date": "2026-08-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P026", "projectName": "Logistics Dashboard", "status": "In Progress",
+      "team": "Operations", "lead": "Xena Mitchell", "dueDate": "2026-08-01", "startDate": "2026-02-20",
+      "description": "Real-time logistics control tower dashboard aggregating carrier data, shipment tracking, cost-per-delivery metrics, and exception alerts for the operations team.",
+      "priority": "Medium", "budget": 65, "progress": 45,
+      "tags": ["Logistics", "Dashboard", "Real-Time", "Carriers", "Operations"],
+      "teamMembers": [
+        {"name": "Xena Mitchell", "role": "Product Owner"},
+        {"name": "Peter Hall",    "role": "Operations Lead"},
+        {"name": "Grace Kim",     "role": "Frontend Developer"}
+      ],
+      "milestones": [
+        {"title": "Data Source Integration", "date": "2026-03-31", "status": "Completed"},
+        {"title": "Dashboard MVP",           "date": "2026-05-31", "status": "In Progress"},
+        {"title": "Alerts & Automation",     "date": "2026-07-01", "status": "Pending"},
+        {"title": "Production Launch",       "date": "2026-08-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P027", "projectName": "AI Code Review Tool", "status": "Planning",
+      "team": "Engineering", "lead": "Yusuf Perez", "dueDate": "2026-10-15", "startDate": "2026-05-15",
+      "description": "Building an internal AI-powered code review assistant using LLM embeddings to flag security vulnerabilities, style violations, and logic errors before peer review.",
+      "priority": "High", "budget": 180, "progress": 10,
+      "tags": ["AI", "LLM", "Code Review", "Security", "DX"],
+      "teamMembers": [
+        {"name": "Yusuf Perez",   "role": "AI Engineer Lead"},
+        {"name": "Umar Adams",    "role": "Security Advisor"},
+        {"name": "Liam Harris",   "role": "Dev Tooling"},
+        {"name": "Quinn Allen",   "role": "CI/CD Integration"}
+      ],
+      "milestones": [
+        {"title": "Research & PoC",          "date": "2026-06-15", "status": "In Progress"},
+        {"title": "Model Fine-tuning",       "date": "2026-07-31", "status": "Pending"},
+        {"title": "IDE Plugin Build",        "date": "2026-09-01", "status": "Pending"},
+        {"title": "Beta to Engineering",     "date": "2026-10-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P028", "projectName": "Mobile App v3", "status": "In Progress",
+      "team": "Engineering", "lead": "Alice Johnson", "dueDate": "2026-09-30", "startDate": "2026-02-01",
+      "description": "Full rebuild of the consumer mobile app in React Native, adding offline mode, biometric auth, push notifications, and a redesigned checkout flow.",
+      "priority": "High", "budget": 200, "progress": 35,
+      "tags": ["Mobile", "React Native", "iOS", "Android", "UX"],
+      "teamMembers": [
+        {"name": "Alice Johnson", "role": "Engineering Lead"},
+        {"name": "Mia Clark",     "role": "UX Lead"},
+        {"name": "Liam Harris",   "role": "Backend APIs"},
+        {"name": "Tina Scott",    "role": "Product Owner"}
+      ],
+      "milestones": [
+        {"title": "Tech Spike & Setup",      "date": "2026-02-28", "status": "Completed"},
+        {"title": "Core Feature Build",      "date": "2026-05-31", "status": "In Progress"},
+        {"title": "Beta Testing",            "date": "2026-08-15", "status": "Pending"},
+        {"title": "App Store Release",       "date": "2026-09-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P029", "projectName": "Kubernetes Cluster Migration", "status": "Completed",
+      "team": "Engineering", "lead": "Eva Martinez", "dueDate": "2026-03-31", "startDate": "2025-10-01",
+      "description": "Migrated all production workloads from self-managed Kubernetes to EKS with Spot instances, cutting infrastructure costs by 35% and improving cluster reliability.",
+      "priority": "High", "budget": 150, "progress": 100,
+      "tags": ["Kubernetes", "EKS", "AWS", "Cost Optimisation", "Cloud"],
+      "teamMembers": [
+        {"name": "Eva Martinez",  "role": "Cloud Architect"},
+        {"name": "Quinn Allen",   "role": "DevOps Engineer"},
+        {"name": "Umar Adams",    "role": "Security Review"}
+      ],
+      "milestones": [
+        {"title": "EKS Setup & Networking",  "date": "2025-11-15", "status": "Completed"},
+        {"title": "Dev/Staging Migration",   "date": "2026-01-15", "status": "Completed"},
+        {"title": "Prod Migration",          "date": "2026-03-01", "status": "Completed"},
+        {"title": "Optimisation & Sign-off", "date": "2026-03-31", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P030", "projectName": "Frontend Component Library", "status": "In Progress",
+      "team": "Engineering", "lead": "Grace Kim", "dueDate": "2026-08-30", "startDate": "2026-02-15",
+      "description": "Creating a shared, accessible React component library with Storybook documentation, automated visual regression tests, and a Figma token sync.",
+      "priority": "Medium", "budget": 75, "progress": 45,
+      "tags": ["React", "Storybook", "Design System", "Accessibility", "Frontend"],
+      "teamMembers": [
+        {"name": "Grace Kim",     "role": "Component Lead"},
+        {"name": "Alice Johnson", "role": "Architecture Review"},
+        {"name": "Mia Clark",     "role": "Figma Token Design"}
+      ],
+      "milestones": [
+        {"title": "Token System & Setup",    "date": "2026-03-31", "status": "Completed"},
+        {"title": "Core Components v1",      "date": "2026-06-01", "status": "In Progress"},
+        {"title": "Storybook Published",     "date": "2026-07-31", "status": "Pending"},
+        {"title": "Adopted by All Teams",    "date": "2026-08-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P031", "projectName": "CRM Integration", "status": "Completed",
+      "team": "Sales", "lead": "Frank Wilson", "dueDate": "2026-04-01", "startDate": "2025-10-15",
+      "description": "Integrated Salesforce with the ERP and marketing automation platform, enabling unified customer data, automated lead routing, and real-time pipeline visibility.",
+      "priority": "High", "budget": 160, "progress": 100,
+      "tags": ["CRM", "Salesforce", "Integration", "ERP", "Sales Ops"],
+      "teamMembers": [
+        {"name": "Frank Wilson",  "role": "Sales Ops Lead"},
+        {"name": "Nathan Lewis",  "role": "CRM Admin"},
+        {"name": "Samuel King",   "role": "Finance Data Liaison"}
+      ],
+      "milestones": [
+        {"title": "Connector Build",         "date": "2025-12-01", "status": "Completed"},
+        {"title": "Data Migration",          "date": "2026-01-31", "status": "Completed"},
+        {"title": "UAT & Training",          "date": "2026-03-15", "status": "Completed"},
+        {"title": "Go-Live",                 "date": "2026-04-01", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P032", "projectName": "Financial Forecasting Model", "status": "Planning",
+      "team": "Finance", "lead": "Henry Brown", "dueDate": "2026-09-30", "startDate": "2026-04-20",
+      "description": "Building a rolling 18-month financial forecasting model with driver-based inputs, scenario analysis, and automated variance reporting integrated with the BI platform.",
+      "priority": "Medium", "budget": 60, "progress": 15,
+      "tags": ["Forecasting", "Finance", "BI", "Scenario Analysis", "FP&A"],
+      "teamMembers": [
+        {"name": "Henry Brown",   "role": "FP&A Lead"},
+        {"name": "David Lee",     "role": "CFO Sponsor"},
+        {"name": "Samuel King",   "role": "Tax Inputs"}
+      ],
+      "milestones": [
+        {"title": "Model Blueprint",         "date": "2026-05-15", "status": "In Progress"},
+        {"title": "Historical Data Load",    "date": "2026-06-30", "status": "Pending"},
+        {"title": "Scenario Engine",         "date": "2026-08-15", "status": "Pending"},
+        {"title": "BI Integration",          "date": "2026-09-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P033", "projectName": "Influencer Marketing Platform", "status": "In Progress",
+      "team": "Marketing", "lead": "Irene Chen", "dueDate": "2026-07-30", "startDate": "2026-02-01",
+      "description": "Deploying an influencer discovery and campaign management platform to scale creator partnerships from 20 to 200 active influencers across key product categories.",
+      "priority": "Medium", "budget": 80, "progress": 40,
+      "tags": ["Influencer", "Creator Economy", "MarTech", "Social", "Campaign"],
+      "teamMembers": [
+        {"name": "Irene Chen",    "role": "Programme Lead"},
+        {"name": "Rachel Young",  "role": "Creator Relations"},
+        {"name": "Bob Smith",     "role": "Brand Alignment"}
+      ],
+      "milestones": [
+        {"title": "Platform Selection",      "date": "2026-03-01", "status": "Completed"},
+        {"title": "Creator Recruitment",     "date": "2026-05-01", "status": "In Progress"},
+        {"title": "First Wave Campaigns",    "date": "2026-06-30", "status": "Pending"},
+        {"title": "Scale to 200 Creators",   "date": "2026-07-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P034", "projectName": "Fleet Management System", "status": "Planning",
+      "team": "Operations", "lead": "James Taylor", "dueDate": "2026-11-01", "startDate": "2026-05-15",
+      "description": "Implementing Samsara fleet telematics across 150 company vehicles to improve route optimisation, driver safety scores, maintenance scheduling, and fuel efficiency.",
+      "priority": "High", "budget": 220, "progress": 5,
+      "tags": ["Fleet", "Telematics", "IoT", "Logistics", "Samsara"],
+      "teamMembers": [
+        {"name": "James Taylor",  "role": "Programme Lead"},
+        {"name": "Peter Hall",    "role": "Operations Manager"},
+        {"name": "Xena Mitchell", "role": "Systems Integration"}
+      ],
+      "milestones": [
+        {"title": "Vendor Evaluation",       "date": "2026-06-01", "status": "Pending"},
+        {"title": "Hardware Rollout",        "date": "2026-08-01", "status": "Pending"},
+        {"title": "Platform Configuration",  "date": "2026-09-30", "status": "Pending"},
+        {"title": "Training & Go-Live",      "date": "2026-11-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P035", "projectName": "IP Portfolio Review", "status": "Completed",
+      "team": "Legal", "lead": "Karen White", "dueDate": "2026-04-20", "startDate": "2025-12-01",
+      "description": "Comprehensive review of the company's 85-patent portfolio to identify renewal priorities, licensing opportunities, and freedom-to-operate risks in new market segments.",
+      "priority": "Medium", "budget": 35, "progress": 100,
+      "tags": ["IP", "Patents", "Legal", "Licensing", "FTO"],
+      "teamMembers": [
+        {"name": "Karen White",   "role": "Lead IP Counsel"},
+        {"name": "Vera Nelson",   "role": "IP Specialist"},
+        {"name": "David Lee",     "role": "Finance — Licensing"}
+      ],
+      "milestones": [
+        {"title": "Patent Inventory",        "date": "2026-01-15", "status": "Completed"},
+        {"title": "Value Assessment",        "date": "2026-02-28", "status": "Completed"},
+        {"title": "Recommendations Report",  "date": "2026-04-01", "status": "Completed"},
+        {"title": "Board Presentation",      "date": "2026-04-20", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P036", "projectName": "GraphQL API Layer", "status": "In Progress",
+      "team": "Engineering", "lead": "Liam Harris", "dueDate": "2026-09-15", "startDate": "2026-03-01",
+      "description": "Introducing a GraphQL federation layer on top of existing REST services to unify the data graph, reduce over-fetching, and power the next-generation frontend.",
+      "priority": "Medium", "budget": 95, "progress": 35,
+      "tags": ["GraphQL", "Federation", "API", "Backend", "DX"],
+      "teamMembers": [
+        {"name": "Liam Harris",   "role": "Tech Lead"},
+        {"name": "Grace Kim",     "role": "Frontend Consumer"},
+        {"name": "Alice Johnson", "role": "Architecture Review"}
+      ],
+      "milestones": [
+        {"title": "Schema Design",           "date": "2026-04-01", "status": "Completed"},
+        {"title": "Service Wrappers",        "date": "2026-06-15", "status": "In Progress"},
+        {"title": "Frontend Migration",      "date": "2026-08-01", "status": "Pending"},
+        {"title": "REST Deprecation",        "date": "2026-09-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P037", "projectName": "UX Research Study", "status": "Completed",
+      "team": "Product", "lead": "Mia Clark", "dueDate": "2026-04-10", "startDate": "2025-12-01",
+      "description": "Multi-method UX research study (diary studies, usability tests, and heuristic evaluation) across three core product flows to inform the 2026 redesign agenda.",
+      "priority": "Medium", "budget": 40, "progress": 100,
+      "tags": ["UX Research", "Usability", "Diary Study", "Heuristics", "Product"],
+      "teamMembers": [
+        {"name": "Mia Clark",     "role": "Research Lead"},
+        {"name": "Tina Scott",    "role": "Product Partner"},
+        {"name": "Olivia Walker", "role": "Participant Recruitment"}
+      ],
+      "milestones": [
+        {"title": "Research Plan",           "date": "2025-12-20", "status": "Completed"},
+        {"title": "Fieldwork Complete",      "date": "2026-02-15", "status": "Completed"},
+        {"title": "Analysis & Synthesis",    "date": "2026-03-20", "status": "Completed"},
+        {"title": "Insights Published",      "date": "2026-04-10", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P038", "projectName": "Key Account Growth Plan", "status": "In Progress",
+      "team": "Sales", "lead": "Nathan Lewis", "dueDate": "2026-08-01", "startDate": "2026-02-01",
+      "description": "Structured account expansion programme for the top 20 strategic accounts, combining executive sponsorship, QBRs, and white-space analysis to drive 30% expansion revenue.",
+      "priority": "High", "budget": 90, "progress": 45,
+      "tags": ["Key Accounts", "Expansion", "Revenue", "Strategic Sales", "QBR"],
+      "teamMembers": [
+        {"name": "Nathan Lewis",  "role": "Account Lead"},
+        {"name": "Frank Wilson",  "role": "Sales Director"},
+        {"name": "Tina Scott",    "role": "Product Liaison"}
+      ],
+      "milestones": [
+        {"title": "Account Tiering",         "date": "2026-02-28", "status": "Completed"},
+        {"title": "White-Space Analysis",    "date": "2026-04-15", "status": "Completed"},
+        {"title": "Account Plans Live",      "date": "2026-06-01", "status": "In Progress"},
+        {"title": "Expansion ARR Target",    "date": "2026-08-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P039", "projectName": "Diversity & Inclusion Programme", "status": "In Progress",
+      "team": "Human Resources", "lead": "Olivia Walker", "dueDate": "2026-09-01", "startDate": "2026-01-15",
+      "description": "Company-wide D&I programme including bias training, pay equity analysis, inclusive hiring practices, an ERG framework, and quarterly progress reporting to the board.",
+      "priority": "Medium", "budget": 60, "progress": 40,
+      "tags": ["D&I", "DEI", "HR", "Pay Equity", "ERG", "Inclusion"],
+      "teamMembers": [
+        {"name": "Olivia Walker", "role": "Programme Lead"},
+        {"name": "Carol Davis",   "role": "HR Director"},
+        {"name": "Karen White",   "role": "Legal — Pay Equity"}
+      ],
+      "milestones": [
+        {"title": "Pay Equity Audit",        "date": "2026-02-28", "status": "Completed"},
+        {"title": "Training Rollout",        "date": "2026-05-01", "status": "In Progress"},
+        {"title": "ERG Launch",              "date": "2026-07-01", "status": "Pending"},
+        {"title": "Board Report Q3",         "date": "2026-09-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P040", "projectName": "Procurement Process Reform", "status": "Planning",
+      "team": "Operations", "lead": "Peter Hall", "dueDate": "2026-10-01", "startDate": "2026-04-20",
+      "description": "Overhauling the source-to-pay process, introducing a vendor portal, e-procurement system, and a preferred supplier programme to cut cycle times by 50%.",
+      "priority": "Medium", "budget": 80, "progress": 12,
+      "tags": ["Procurement", "S2P", "Vendor Portal", "Operations", "Process"],
+      "teamMembers": [
+        {"name": "Peter Hall",    "role": "Programme Lead"},
+        {"name": "James Taylor",  "role": "Supply Chain Liaison"},
+        {"name": "David Lee",     "role": "Finance Sponsor"}
+      ],
+      "milestones": [
+        {"title": "Process Mapping",         "date": "2026-05-15", "status": "In Progress"},
+        {"title": "System Selection",        "date": "2026-06-30", "status": "Pending"},
+        {"title": "Implementation",          "date": "2026-09-01", "status": "Pending"},
+        {"title": "Go-Live",                 "date": "2026-10-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P041", "projectName": "CI/CD Maturity Programme", "status": "Completed",
+      "team": "Engineering", "lead": "Quinn Allen", "dueDate": "2026-03-15", "startDate": "2025-10-01",
+      "description": "Raised CI/CD maturity from Level 1 to Level 3 across all squads — standardising pipelines, enforcing branch policies, and achieving sub-10-minute build times.",
+      "priority": "High", "budget": 85, "progress": 100,
+      "tags": ["CI/CD", "DevOps", "Quality", "Automation", "DORA"],
+      "teamMembers": [
+        {"name": "Quinn Allen",   "role": "DevOps Lead"},
+        {"name": "Eva Martinez",  "role": "Platform Engineer"},
+        {"name": "Liam Harris",   "role": "Dev Champion"}
+      ],
+      "milestones": [
+        {"title": "Maturity Assessment",     "date": "2025-10-31", "status": "Completed"},
+        {"title": "Toolchain Standardised",  "date": "2025-12-15", "status": "Completed"},
+        {"title": "Level 2 Achieved",        "date": "2026-01-31", "status": "Completed"},
+        {"title": "Level 3 Sign-off",        "date": "2026-03-15", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P042", "projectName": "SEO Optimisation Project", "status": "Planning",
+      "team": "Marketing", "lead": "Rachel Young", "dueDate": "2026-07-15", "startDate": "2026-04-20",
+      "description": "Technical SEO overhaul and content optimisation programme targeting a 40% increase in organic sessions through Core Web Vitals improvements and topic-cluster strategy.",
+      "priority": "Low", "budget": 30, "progress": 10,
+      "tags": ["SEO", "Organic", "Content", "Core Web Vitals", "Marketing"],
+      "teamMembers": [
+        {"name": "Rachel Young",  "role": "SEO Lead"},
+        {"name": "Irene Chen",    "role": "Content Strategy"},
+        {"name": "Grace Kim",     "role": "Technical SEO"}
+      ],
+      "milestones": [
+        {"title": "Technical Audit",         "date": "2026-05-01", "status": "In Progress"},
+        {"title": "Content Gap Analysis",    "date": "2026-06-01", "status": "Pending"},
+        {"title": "Optimisation Sprint",     "date": "2026-07-01", "status": "Pending"},
+        {"title": "Performance Baseline",    "date": "2026-07-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P043", "projectName": "Payroll System Upgrade", "status": "In Progress",
+      "team": "Finance", "lead": "Samuel King", "dueDate": "2026-06-30", "startDate": "2026-01-10",
+      "description": "Migrating from the legacy payroll system to ADP Workforce Now, covering multi-country payroll for 500+ employees in 6 countries with automated tax filing.",
+      "priority": "High", "budget": 130, "progress": 70,
+      "tags": ["Payroll", "ADP", "HR Tech", "Finance", "Multi-Country"],
+      "teamMembers": [
+        {"name": "Samuel King",   "role": "Finance Lead"},
+        {"name": "Carol Davis",   "role": "HR Payroll Liaison"},
+        {"name": "Vera Nelson",   "role": "Legal — Employment Law"}
+      ],
+      "milestones": [
+        {"title": "Data Migration",          "date": "2026-03-01", "status": "Completed"},
+        {"title": "Parallel Run Month 1",    "date": "2026-04-30", "status": "Completed"},
+        {"title": "Parallel Run Month 2",    "date": "2026-05-31", "status": "In Progress"},
+        {"title": "Full Cutover",            "date": "2026-06-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P044", "projectName": "A/B Testing Framework", "status": "Planning",
+      "team": "Product", "lead": "Tina Scott", "dueDate": "2026-07-31", "startDate": "2026-04-15",
+      "description": "Building a company-wide experimentation platform on top of LaunchDarkly to enable product, marketing, and engineering teams to run statistically rigorous A/B tests.",
+      "priority": "Medium", "budget": 55, "progress": 15,
+      "tags": ["A/B Testing", "Experimentation", "LaunchDarkly", "Product", "Analytics"],
+      "teamMembers": [
+        {"name": "Tina Scott",    "role": "Product Manager"},
+        {"name": "Mia Clark",     "role": "UX Research"},
+        {"name": "Yusuf Perez",   "role": "Data Engineering"}
+      ],
+      "milestones": [
+        {"title": "Platform Setup",          "date": "2026-05-15", "status": "In Progress"},
+        {"title": "SDK Integration",         "date": "2026-06-15", "status": "Pending"},
+        {"title": "First Experiments",       "date": "2026-07-15", "status": "Pending"},
+        {"title": "Team Enablement",         "date": "2026-07-31", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P045", "projectName": "Security Patch Automation", "status": "In Progress",
+      "team": "Engineering", "lead": "Umar Adams", "dueDate": "2026-07-01", "startDate": "2026-02-01",
+      "description": "Automating the detection and remediation of CVEs across all production containers and OS packages using Snyk and Dependabot, targeting a 48-hour patch SLA.",
+      "priority": "High", "budget": 90, "progress": 50,
+      "tags": ["Security", "CVE", "Snyk", "Automation", "Patching"],
+      "teamMembers": [
+        {"name": "Umar Adams",    "role": "Security Lead"},
+        {"name": "Quinn Allen",   "role": "DevOps Integration"},
+        {"name": "Liam Harris",   "role": "Dependency Ownership"}
+      ],
+      "milestones": [
+        {"title": "Tooling Integration",     "date": "2026-03-01", "status": "Completed"},
+        {"title": "Baseline Scan",           "date": "2026-04-15", "status": "Completed"},
+        {"title": "Auto-PR Workflow",        "date": "2026-06-01", "status": "In Progress"},
+        {"title": "48hr SLA Target",         "date": "2026-07-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P046", "projectName": "Data Privacy Framework", "status": "Planning",
+      "team": "Legal", "lead": "Vera Nelson", "dueDate": "2026-08-31", "startDate": "2026-04-01",
+      "description": "Establishing a comprehensive data privacy framework covering data classification, retention schedules, privacy-by-design standards, and a data ethics review board.",
+      "priority": "High", "budget": 80, "progress": 12,
+      "tags": ["Privacy", "Data Ethics", "GDPR", "CCPA", "Legal", "Framework"],
+      "teamMembers": [
+        {"name": "Vera Nelson",   "role": "Privacy Lead"},
+        {"name": "Karen White",   "role": "General Counsel"},
+        {"name": "Umar Adams",    "role": "Data Security"},
+        {"name": "Carol Davis",   "role": "HR Data Governance"}
+      ],
+      "milestones": [
+        {"title": "Framework Design",        "date": "2026-05-01", "status": "In Progress"},
+        {"title": "Policy Drafting",         "date": "2026-06-15", "status": "Pending"},
+        {"title": "Ethics Board Setup",      "date": "2026-08-01", "status": "Pending"},
+        {"title": "Company Rollout",         "date": "2026-08-31", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P047", "projectName": "International Sales Expansion", "status": "Planning",
+      "team": "Sales", "lead": "William Carter", "dueDate": "2026-09-30", "startDate": "2026-04-01",
+      "description": "Entering three new international markets (Japan, Brazil, Australia) with localised go-to-market strategies, in-country hiring, and regulatory compliance planning.",
+      "priority": "High", "budget": 200, "progress": 8,
+      "tags": ["International", "Expansion", "GTM", "Japan", "Brazil", "APAC"],
+      "teamMembers": [
+        {"name": "William Carter","role": "International Lead"},
+        {"name": "Frank Wilson",  "role": "Sales Director"},
+        {"name": "Karen White",   "role": "Legal — Regulatory"},
+        {"name": "Vera Nelson",   "role": "Compliance Advisor"}
+      ],
+      "milestones": [
+        {"title": "Market Analysis",         "date": "2026-05-01", "status": "In Progress"},
+        {"title": "Legal Entity Setup",      "date": "2026-06-30", "status": "Pending"},
+        {"title": "Hiring & GTM",            "date": "2026-08-31", "status": "Pending"},
+        {"title": "Market Launch",           "date": "2026-09-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P048", "projectName": "Real-Time Inventory Tracker", "status": "In Progress",
+      "team": "Operations", "lead": "Xena Mitchell", "dueDate": "2026-09-01", "startDate": "2026-02-01",
+      "description": "Deploying RFID-based real-time inventory tracking across three warehouses, integrated with the ERP system to eliminate manual cycle counts and reduce stock discrepancies.",
+      "priority": "High", "budget": 115, "progress": 60,
+      "tags": ["RFID", "Inventory", "IoT", "ERP", "Warehouse", "Real-Time"],
+      "teamMembers": [
+        {"name": "Xena Mitchell", "role": "Programme Lead"},
+        {"name": "James Taylor",  "role": "Warehouse Operations"},
+        {"name": "Peter Hall",    "role": "ERP Integration"}
+      ],
+      "milestones": [
+        {"title": "RFID Infrastructure",     "date": "2026-03-31", "status": "Completed"},
+        {"title": "ERP Integration",         "date": "2026-06-01", "status": "Completed"},
+        {"title": "Warehouse 1 Live",        "date": "2026-07-15", "status": "In Progress"},
+        {"title": "All Sites Live",          "date": "2026-09-01", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P049", "projectName": "ML Model Deployment Pipeline", "status": "Planning",
+      "team": "Engineering", "lead": "Yusuf Perez", "dueDate": "2026-11-30", "startDate": "2026-05-20",
+      "description": "Building an MLOps platform on SageMaker to automate model training, evaluation, deployment, and drift monitoring for the company's eight production ML models.",
+      "priority": "High", "budget": 250, "progress": 5,
+      "tags": ["MLOps", "SageMaker", "ML", "AI", "Platform Engineering"],
+      "teamMembers": [
+        {"name": "Yusuf Perez",   "role": "ML Engineer Lead"},
+        {"name": "Eva Martinez",  "role": "Cloud Platform"},
+        {"name": "Umar Adams",    "role": "Model Security"},
+        {"name": "Tina Scott",    "role": "Product Owner"}
+      ],
+      "milestones": [
+        {"title": "Platform Architecture",   "date": "2026-06-30", "status": "Pending"},
+        {"title": "Pipeline Prototype",      "date": "2026-08-31", "status": "Pending"},
+        {"title": "First Model Migrated",    "date": "2026-10-15", "status": "Pending"},
+        {"title": "Full Platform Live",      "date": "2026-11-30", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P050", "projectName": "Vendor Risk Assessment", "status": "Completed",
+      "team": "Finance", "lead": "David Lee", "dueDate": "2026-04-25", "startDate": "2026-01-15",
+      "description": "Assessed financial stability, cybersecurity posture, and contractual risk of the top 50 critical vendors, resulting in a tiered risk register and 12 contract renegotiations.",
+      "priority": "Medium", "budget": 45, "progress": 100,
+      "tags": ["Vendor Risk", "Finance", "Procurement", "Cybersecurity", "Compliance"],
+      "teamMembers": [
+        {"name": "David Lee",     "role": "Finance Lead"},
+        {"name": "Karen White",   "role": "Legal Contracts"},
+        {"name": "Umar Adams",    "role": "Cyber Risk Advisor"}
+      ],
+      "milestones": [
+        {"title": "Vendor Inventory",        "date": "2026-02-01", "status": "Completed"},
+        {"title": "Risk Scoring",            "date": "2026-03-15", "status": "Completed"},
+        {"title": "Contract Reviews",        "date": "2026-04-10", "status": "Completed"},
+        {"title": "Risk Register Published", "date": "2026-04-25", "status": "Completed"}
+      ]
+    },
+    {
+      "projectId": "P051", "projectName": "Learning & Development Portal", "status": "In Progress",
+      "team": "Human Resources", "lead": "Carol Davis", "dueDate": "2026-08-15", "startDate": "2026-02-01",
+      "description": "Launching a personalised L&D portal on Degreed, curating learning paths by role and seniority, and integrating with LinkedIn Learning and internal knowledge base.",
+      "priority": "Medium", "budget": 70, "progress": 50,
+      "tags": ["L&D", "Degreed", "Learning", "HR", "Upskilling"],
+      "teamMembers": [
+        {"name": "Carol Davis",   "role": "HR Lead"},
+        {"name": "Olivia Walker", "role": "L&D Specialist"},
+        {"name": "Mia Clark",     "role": "UX — Portal Design"}
+      ],
+      "milestones": [
+        {"title": "Platform Setup",          "date": "2026-03-15", "status": "Completed"},
+        {"title": "Content Curation",        "date": "2026-05-31", "status": "In Progress"},
+        {"title": "Pilot Group Launch",      "date": "2026-07-01", "status": "Pending"},
+        {"title": "Company-wide Launch",     "date": "2026-08-15", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P052", "projectName": "Product Launch Campaign", "status": "In Progress",
+      "team": "Marketing", "lead": "Bob Smith", "dueDate": "2026-07-20", "startDate": "2026-03-01",
+      "description": "360-degree integrated launch campaign for the new enterprise product tier, spanning PR, analyst briefings, paid media, roadshow events, and customer success stories.",
+      "priority": "High", "budget": 110, "progress": 60,
+      "tags": ["Product Launch", "PR", "Events", "Enterprise", "Marketing"],
+      "teamMembers": [
+        {"name": "Bob Smith",     "role": "Campaign Lead"},
+        {"name": "Irene Chen",    "role": "Digital Channels"},
+        {"name": "Rachel Young",  "role": "Content & PR"},
+        {"name": "Tina Scott",    "role": "Product Messaging"}
+      ],
+      "milestones": [
+        {"title": "Messaging Framework",     "date": "2026-03-31", "status": "Completed"},
+        {"title": "Press & Analyst Briefings","date": "2026-05-15", "status": "Completed"},
+        {"title": "Campaign Live",           "date": "2026-06-15", "status": "In Progress"},
+        {"title": "Launch Event",            "date": "2026-07-20", "status": "Pending"}
+      ]
+    },
+    {
+      "projectId": "P053", "projectName": "Observability Stack Setup", "status": "Planning",
+      "team": "Engineering", "lead": "Alice Johnson", "dueDate": "2026-10-31", "startDate": "2026-05-20",
+      "description": "Deploying a centralised observability stack (Datadog) covering metrics, logs, traces, and synthetic monitoring with SLO dashboards and automated incident routing via PagerDuty.",
+      "priority": "Medium", "budget": 85, "progress": 10,
+      "tags": ["Observability", "Datadog", "Monitoring", "PagerDuty", "SLO"],
+      "teamMembers": [
+        {"name": "Alice Johnson", "role": "Engineering Lead"},
+        {"name": "Umar Adams",    "role": "Security & Compliance"},
+        {"name": "Quinn Allen",   "role": "DevOps Integration"},
+        {"name": "Yusuf Perez",   "role": "ML Monitoring"}
+      ],
+      "milestones": [
+        {"title": "Agent Rollout",           "date": "2026-06-15", "status": "Pending"},
+        {"title": "Dashboard Build",         "date": "2026-08-01", "status": "Pending"},
+        {"title": "SLO Configuration",       "date": "2026-09-15", "status": "Pending"},
+        {"title": "PagerDuty Integration",   "date": "2026-10-31", "status": "Pending"}
+      ]
+    }
   ]
 }

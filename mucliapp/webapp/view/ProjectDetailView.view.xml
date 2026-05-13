@@ -1,0 +1,201 @@
+<mvc:View controllerName="mucliapp.controller.ProjectDetailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:uxap="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true">
+
+    <uxap:ObjectPageLayout id="detailPage"
+        alwaysShowContentHeader="false"
+        showTitleInHeaderContent="true"
+        upperCaseAnchorBar="false">
+
+        <!-- ═══ STICKY HEADER TITLE ═══ -->
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle>
+
+                <uxap:navigationActions>
+                    <Button icon="sap-icon://nav-back" press=".onNavBack" type="Transparent" tooltip="Back to Projects"/>
+                </uxap:navigationActions>
+
+                <uxap:heading>
+                    <Title id="detailPageTitle" text="Project" level="H1" wrapping="true"/>
+                </uxap:heading>
+                <uxap:snappedHeading>
+                    <FlexBox alignItems="Center" wrap="Wrap">
+                        <Title id="snappedTitle" text="Project" level="H3" class="sapUiSmallMarginEnd"/>
+                        <ObjectStatus id="snappedStatus" text="" inverted="true" state="None"/>
+                    </FlexBox>
+                </uxap:snappedHeading>
+
+                <uxap:expandedContent>
+                    <Text id="projectDescription" text="" wrapping="true" class="sapUiSmallMarginTop"/>
+                </uxap:expandedContent>
+                <uxap:snappedContent>
+                    <ObjectAttribute id="snappedLead" title="Lead" text=""/>
+                </uxap:snappedContent>
+
+                <uxap:actions>
+                    <Button id="priorityBtn" text="" type="Ghost" enabled="false"/>
+                    <ObjectStatus id="headerStatus" text="" inverted="true" state="None" class="sapUiSmallMarginBegin"/>
+                </uxap:actions>
+
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+
+        <!-- ═══ COLLAPSIBLE HEADER CONTENT ═══ -->
+        <uxap:headerContent>
+            <FlexBox wrap="Wrap" alignItems="Center">
+                <VBox class="sapUiMediumMarginEnd">
+                    <ObjectAttribute id="hcProjectId"   title="Project ID"   text=""/>
+                    <ObjectAttribute id="hcLead"        title="Lead"         text=""/>
+                    <ObjectAttribute id="hcDepartment"  title="Department"   text=""/>
+                </VBox>
+                <VBox class="sapUiMediumMarginEnd">
+                    <ObjectAttribute id="hcStartDate"   title="Start Date"   text=""/>
+                    <ObjectAttribute id="hcDueDate"     title="Due Date"     text=""/>
+                    <ObjectAttribute id="hcPriority"    title="Priority"     text=""/>
+                </VBox>
+                <VBox class="sapUiMediumMarginEnd">
+                    <ObjectAttribute id="hcBudget"      title="Budget"       text=""/>
+                    <ObjectAttribute id="hcTeamSize"    title="Team Size"    text=""/>
+                    <ObjectAttribute id="hcProgress"    title="Progress"     text=""/>
+                </VBox>
+            </FlexBox>
+        </uxap:headerContent>
+
+        <!-- ═══ SECTIONS ═══ -->
+        <uxap:sections>
+
+            <!-- 1. AT A GLANCE -->
+            <uxap:ObjectPageSection id="glanceSection" title="At a Glance" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <VBox class="sapUiSmallMarginBottom">
+                                <!-- Progress Bar -->
+                                <Panel id="progressPanel" headerText="Project Progress" expandable="false" class="sapUiSmallMarginBottom">
+                                    <content>
+                                        <VBox class="sapUiSmallMargin">
+                                            <FlexBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                                                <Label text="Overall Completion"/>
+                                                <Text id="progressPct" text="0%"/>
+                                            </FlexBox>
+                                            <ProgressIndicator id="progressBar" percentValue="0" displayValue="" showValue="false" height="1.5rem"/>
+                                        </VBox>
+                                    </content>
+                                </Panel>
+                                <!-- KPI Tiles -->
+                                <FlexBox wrap="Wrap">
+                                    <GenericTile id="budgetTile" header="Budget" subheader="Allocated" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                        <tileContent><TileContent><content>
+                                            <NumericContent id="budgetValue" value="0" scale="K" unit="$" icon="sap-icon://money-bills" withMargin="false"/>
+                                        </content></TileContent></tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="Days Remaining" subheader="Until due date" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                        <tileContent><TileContent><content>
+                                            <NumericContent id="daysRemaining" value="0" icon="sap-icon://appointment-2" withMargin="false"/>
+                                        </content></TileContent></tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="Team Size" subheader="Members assigned" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                        <tileContent><TileContent><content>
+                                            <NumericContent id="teamSizeValue" value="0" icon="sap-icon://group" withMargin="false"/>
+                                        </content></TileContent></tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="Milestones" subheader="Completed / Total" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                        <tileContent><TileContent><content>
+                                            <NumericContent id="milestoneDone" value="0" icon="sap-icon://accept" valueColor="Good" withMargin="false"/>
+                                        </content></TileContent></tileContent>
+                                    </GenericTile>
+                                </FlexBox>
+                            </VBox>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- 2. PROJECT DETAILS -->
+            <uxap:ObjectPageSection id="detailsSection" title="Project Details" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <form:SimpleForm id="detailsForm"
+                                editable="false"
+                                layout="ResponsiveGridLayout"
+                                labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
+                                adjustLabelSpan="false"
+                                emptySpanXL="4" emptySpanL="4" emptySpanM="0"
+                                columnsXL="1" columnsL="1" columnsM="1"
+                                singleContainerFullSize="false">
+                                <form:content>
+                                    <Label text="Project ID"/>
+                                    <Text id="detProjectId" text=""/>
+                                    <Label text="Project Name"/>
+                                    <Text id="detProjectName" text=""/>
+                                    <Label text="Status"/>
+                                    <ObjectStatus id="detStatus" text="" inverted="true" state="None"/>
+                                    <Label text="Priority"/>
+                                    <ObjectStatus id="detPriority" text="" state="None"/>
+                                    <Label text="Department"/>
+                                    <Text id="detDept" text=""/>
+                                    <Label text="Project Lead"/>
+                                    <Text id="detLead" text=""/>
+                                    <Label text="Start Date"/>
+                                    <Text id="detStartDate" text=""/>
+                                    <Label text="Due Date"/>
+                                    <Text id="detDueDate" text=""/>
+                                    <Label text="Budget"/>
+                                    <Text id="detBudget" text=""/>
+                                    <Label text="Description"/>
+                                    <Text id="detDescription" text="" wrapping="true"/>
+                                </form:content>
+                            </form:SimpleForm>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- 3. MILESTONES -->
+            <uxap:ObjectPageSection id="milestonesSection" title="Milestones" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <List id="milestoneList" showSeparators="Inner">
+                                <!-- populated dynamically -->
+                            </List>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- 4. TEAM MEMBERS -->
+            <uxap:ObjectPageSection id="teamSection" title="Team Members" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <List id="teamList" showSeparators="Inner">
+                                <!-- populated dynamically -->
+                            </List>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- 5. TAGS -->
+            <uxap:ObjectPageSection id="tagsSection" title="Tags" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <FlexBox id="tagsBox" wrap="Wrap" class="sapUiSmallMarginBottom">
+                                <!-- populated dynamically -->
+                            </FlexBox>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>

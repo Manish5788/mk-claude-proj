@@ -114,7 +114,7 @@
                             <Column minScreenWidth="Desktop" demandPopin="true"><Text text="Due Date"/></Column>
                         </columns>
                         <items>
-                            <ColumnListItem>
+                            <ColumnListItem type="Navigation" press=".onProjectPress">
                                 <cells>
                                     <ObjectIdentifier title="{projects>projectId}"/>
                                     <ObjectIdentifier title="{projects>projectName}" titleActive="false"/>

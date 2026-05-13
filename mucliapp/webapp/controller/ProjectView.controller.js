@@ -8,6 +8,7 @@ sap.ui.define([
 
     return Controller.extend("mucliapp.controller.ProjectView", {
         _sEmployeeName: null,
+        _sEmployeeId: null,
         _sCurrentStatusKey: "",
 
         onInit: function () {
@@ -27,6 +28,7 @@ sap.ui.define([
 
         _onRouteMatched: function (oEvent) {
             var sEmployeeId = oEvent.getParameter("arguments").employeeId;
+            this._sEmployeeId = sEmployeeId;
             this._sCurrentStatusKey = "";
             var oEmployeeModel = this.getView().getModel("employees");
             var that = this;
@@ -101,6 +103,14 @@ sap.ui.define([
             if (oBinding) {
                 oBinding.filter(aFilters);
             }
+        },
+
+        onProjectPress: function (oEvent) {
+            var oCtx = oEvent.getSource().getBindingContext("projects");
+            this.getOwnerComponent().getRouter().navTo("RouteProjectDetailView", {
+                employeeId: this._sEmployeeId || "unknown",
+                projectId:  oCtx.getProperty("projectId")
+            });
         },
 
         onNavBack: function () {
