@@ -76,6 +76,13 @@
                     "target": [
                         "TargetMainView"
                     ]
+                },
+                {
+                    "name": "RouteProjectView",
+                    "pattern": "projects",
+                    "target": [
+                        "TargetProjectView"
+                    ]
                 }
             ],
             "targets": {
@@ -85,6 +92,13 @@
                     "clearControlAggregation": false,
                     "viewId": "MainView",
                     "viewName": "MainView"
+                },
+                "TargetProjectView": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "ProjectView",
+                    "viewName": "ProjectView"
                 }
             }
         },

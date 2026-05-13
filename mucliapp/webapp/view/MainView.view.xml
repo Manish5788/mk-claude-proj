@@ -17,6 +17,10 @@
                                     width="16rem"
                                     placeholder="Filter by Department"
                                     liveChange=".onDepartmentSearch"/>
+                                <Button
+                                    text="View Projects"
+                                    icon="sap-icon://project-definition-triangle"
+                                    press=".onNavToProjects"/>
                             </Toolbar>
                         </headerToolbar>
                         <columns>

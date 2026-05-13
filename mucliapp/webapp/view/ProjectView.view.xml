@@ -1,0 +1,51 @@
+<mvc:View controllerName="mucliapp.controller.ProjectView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="projectPage" title="{i18n>projectViewTitle}" backgroundDesign="Solid"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <content>
+            <HBox class="employeePageContent">
+                <VBox class="employeeTableWrapper">
+                    <Table id="projectTable"
+                        items="{projects>/projects}"
+                        sticky="ColumnHeaders,HeaderToolbar"
+                        class="sapUiResponsiveContentPadding">
+                        <headerToolbar>
+                            <Toolbar>
+                                <Title text="Project List" level="H4"/>
+                                <ToolbarSpacer/>
+                                <SearchField
+                                    width="16rem"
+                                    placeholder="Filter by Status"
+                                    liveChange=".onStatusSearch"/>
+                            </Toolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column width="8rem"><Text text="Project ID"/></Column>
+                            <Column><Text text="Project Name"/></Column>
+                            <Column><Text text="Status"/></Column>
+                            <Column><Text text="Team"/></Column>
+                            <Column><Text text="Lead"/></Column>
+                            <Column><Text text="Due Date"/></Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <ObjectIdentifier title="{projects>projectId}"/>
+                                    <Text text="{projects>projectName}"/>
+                                    <ObjectStatus
+                                        text="{projects>status}"
+                                        state="{= ${projects>status} === 'Completed' ? 'Success' : ${projects>status} === 'In Progress' ? 'Warning' : 'Information' }"/>
+                                    <Text text="{projects>team}"/>
+                                    <Text text="{projects>lead}"/>
+                                    <Text text="{projects>dueDate}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

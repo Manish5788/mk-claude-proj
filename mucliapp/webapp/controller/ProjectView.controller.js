@@ -6,23 +6,23 @@ sap.ui.define([
 ], function (Controller, JSONModel, Filter, FilterOperator) {
     "use strict";
 
-    return Controller.extend("mucliapp.controller.MainView", {
+    return Controller.extend("mucliapp.controller.ProjectView", {
         onInit: function () {
-            var oModel = new JSONModel(sap.ui.require.toUrl("mucliapp/model/employees.json"));
-            this.getView().setModel(oModel, "employees");
+            var oModel = new JSONModel(sap.ui.require.toUrl("mucliapp/model/projects.json"));
+            this.getView().setModel(oModel, "projects");
         },
 
-        onNavToProjects: function () {
-            this.getOwnerComponent().getRouter().navTo("RouteProjectView");
+        onNavBack: function () {
+            this.getOwnerComponent().getRouter().navTo("RouteMainView");
         },
 
-        onDepartmentSearch: function (oEvent) {
+        onStatusSearch: function (oEvent) {
             var sQuery = oEvent.getParameter("newValue");
-            var oTable = this.byId("employeeTable");
+            var oTable = this.byId("projectTable");
             var oBinding = oTable.getBinding("items");
 
             var aFilters = sQuery
-                ? [new Filter("department", FilterOperator.Contains, sQuery)]
+                ? [new Filter("status", FilterOperator.Contains, sQuery)]
                 : [];
 
             oBinding.filter(aFilters);

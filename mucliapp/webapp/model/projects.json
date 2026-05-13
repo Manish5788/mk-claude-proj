@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "projectId": "P001",
+      "projectName": "UI5 Dashboard Redesign",
+      "status": "In Progress",
+      "team": "Engineering",
+      "lead": "Alice Johnson",
+      "dueDate": "2026-07-31"
+    },
+    {
+      "projectId": "P002",
+      "projectName": "Q3 Marketing Campaign",
+      "status": "Planning",
+      "team": "Marketing",
+      "lead": "Bob Smith",
+      "dueDate": "2026-06-15"
+    },
+    {
+      "projectId": "P003",
+      "projectName": "HR Policy Overhaul",
+      "status": "Completed",
+      "team": "Human Resources",
+      "lead": "Carol Davis",
+      "dueDate": "2026-04-30"
+    },
+    {
+      "projectId": "P004",
+      "projectName": "Annual Budget Review",
+      "status": "In Progress",
+      "team": "Finance",
+      "lead": "David Lee",
+      "dueDate": "2026-05-31"
+    },
+    {
+      "projectId": "P005",
+      "projectName": "Cloud Migration Phase 2",
+      "status": "Planning",
+      "team": "Engineering",
+      "lead": "Eva Martinez",
+      "dueDate": "2026-09-30"
+    },
+    {
+      "projectId": "P006",
+      "projectName": "Customer Portal v2",
+      "status": "In Progress",
+      "team": "Engineering",
+      "lead": "Alice Johnson",
+      "dueDate": "2026-08-15"
+    },
+    {
+      "projectId": "P007",
+      "projectName": "Brand Refresh",
+      "status": "Completed",
+      "team": "Marketing",
+      "lead": "Bob Smith",
+      "dueDate": "2026-03-20"
+    }
+  ]
+}
