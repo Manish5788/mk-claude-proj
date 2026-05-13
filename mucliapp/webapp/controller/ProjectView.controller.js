@@ -7,6 +7,9 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("mucliapp.controller.ProjectView", {
+        _sEmployeeName: null,
+        _sCurrentStatusKey: "",
+
         onInit: function () {
             this.getView().setModel(
                 new JSONModel(sap.ui.require.toUrl("mucliapp/model/projects.json")),
@@ -24,26 +27,79 @@ sap.ui.define([
 
         _onRouteMatched: function (oEvent) {
             var sEmployeeId = oEvent.getParameter("arguments").employeeId;
+            this._sCurrentStatusKey = "";
             var oEmployeeModel = this.getView().getModel("employees");
             var that = this;
 
-            function applyFilter() {
+            function applyEmployee() {
                 var aEmployees = oEmployeeModel.getProperty("/employees") || [];
                 var oEmployee = aEmployees.find(function (e) { return e.employeeId === sEmployeeId; });
                 if (!oEmployee) { return; }
 
-                that.byId("projectPage").setTitle(oEmployee.name + "’s Projects");
+                that._sEmployeeName = oEmployee.name;
 
-                var oBinding = that.byId("projectTable").getBinding("items");
-                if (oBinding) {
-                    oBinding.filter([new Filter("lead", FilterOperator.EQ, oEmployee.name)]);
+                // Header fields
+                that.byId("pageTitle").setText(oEmployee.name + "’s Projects");
+                that.byId("snappedId").setText(oEmployee.employeeId);
+                that.byId("snappedDept").setText(oEmployee.department);
+                that.byId("empIdAttr").setText(oEmployee.employeeId);
+                that.byId("empDeptAttr").setText(oEmployee.department);
+
+                var oProjectModel = that.getView().getModel("projects");
+
+                function applyProjectFilter() {
+                    that._applyFilters("");
+                    that._updateKPIs(oEmployee.name);
+                }
+
+                if (oProjectModel.getProperty("/projects")) {
+                    applyProjectFilter();
+                } else {
+                    oProjectModel.attachEventOnce("requestCompleted", applyProjectFilter);
                 }
             }
 
             if (oEmployeeModel.getProperty("/employees")) {
-                applyFilter();
+                applyEmployee();
             } else {
-                oEmployeeModel.attachEventOnce("requestCompleted", applyFilter);
+                oEmployeeModel.attachEventOnce("requestCompleted", applyEmployee);
+            }
+        },
+
+        _updateKPIs: function (sName) {
+            var aAll = (this.getView().getModel("projects").getProperty("/projects") || [])
+                .filter(function (p) { return p.lead === sName; });
+
+            this.byId("totalCount").setValue(aAll.length);
+            this.byId("inProgressCount").setValue(aAll.filter(function (p) { return p.status === "In Progress"; }).length);
+            this.byId("completedCount").setValue(aAll.filter(function (p) { return p.status === "Completed"; }).length);
+            this.byId("planningCount").setValue(aAll.filter(function (p) { return p.status === "Planning"; }).length);
+            this.byId("projectTableTitle").setText(this._sEmployeeName + "’s Projects (" + aAll.length + ")");
+        },
+
+        _applyFilters: function (sQuery) {
+            var aFilters = [];
+
+            if (this._sEmployeeName) {
+                aFilters.push(new Filter("lead", FilterOperator.EQ, this._sEmployeeName));
+            }
+            if (this._sCurrentStatusKey) {
+                aFilters.push(new Filter("status", FilterOperator.EQ, this._sCurrentStatusKey));
+            }
+            if (sQuery) {
+                aFilters.push(new Filter({
+                    filters: [
+                        new Filter("projectName", FilterOperator.Contains, sQuery),
+                        new Filter("status", FilterOperator.Contains, sQuery),
+                        new Filter("team", FilterOperator.Contains, sQuery)
+                    ],
+                    and: false
+                }));
+            }
+
+            var oBinding = this.byId("projectTable").getBinding("items");
+            if (oBinding) {
+                oBinding.filter(aFilters);
             }
         },
 
@@ -51,16 +107,13 @@ sap.ui.define([
             this.getOwnerComponent().getRouter().navTo("RouteMainView");
         },
 
-        onStatusSearch: function (oEvent) {
-            var sQuery = oEvent.getParameter("newValue");
-            var oTable = this.byId("projectTable");
-            var oBinding = oTable.getBinding("items");
+        onStatusTabSelect: function (oEvent) {
+            this._sCurrentStatusKey = oEvent.getParameter("key");
+            this._applyFilters("");
+        },
 
-            var aFilters = sQuery
-                ? [new Filter("status", FilterOperator.Contains, sQuery)]
-                : [];
-
-            oBinding.filter(aFilters);
+        onProjectSearch: function (oEvent) {
+            this._applyFilters(oEvent.getParameter("newValue"));
         }
     });
 });

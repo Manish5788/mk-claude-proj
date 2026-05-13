@@ -1,51 +1,137 @@
 <mvc:View controllerName="mucliapp.controller.ProjectView"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="projectPage" title="{i18n>projectViewTitle}" backgroundDesign="Solid"
-        showNavButton="true"
-        navButtonPress=".onNavBack">
-        <content>
-            <HBox class="employeePageContent">
-                <VBox class="employeeTableWrapper">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    displayBlock="true">
+
+    <f:DynamicPage id="projectDynamicPage" headerExpanded="true" toggleHeaderOnTitleClick="true" fitContent="true">
+
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:navigationActions>
+                    <Button icon="sap-icon://nav-back" press=".onNavBack" type="Transparent"/>
+                </f:navigationActions>
+                <f:heading>
+                    <Title id="pageTitle" text="Projects" level="H2"/>
+                </f:heading>
+                <f:snappedContent>
+                    <FlexBox wrap="Wrap">
+                        <ObjectAttribute id="snappedId"   title="ID"         text="" class="sapUiSmallMarginEnd"/>
+                        <ObjectAttribute id="snappedDept" title="Department" text=""/>
+                    </FlexBox>
+                </f:snappedContent>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox wrap="Wrap" class="sapUiSmallMargin">
+                    <VBox justifyContent="Center" class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                        <ObjectAttribute id="empIdAttr"   title="Employee ID"  text=""/>
+                        <ObjectAttribute id="empDeptAttr" title="Department"   text=""/>
+                    </VBox>
+                    <GenericTile id="totalTile" header="Total Projects" tileSize="S"
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent id="totalCount" value="0"
+                                        icon="sap-icon://project-definition-triangle" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile header="In Progress" tileSize="S"
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent id="inProgressCount" value="0"
+                                        icon="sap-icon://status-in-process" valueColor="Critical" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile header="Completed" tileSize="S"
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent id="completedCount" value="0"
+                                        icon="sap-icon://accept" valueColor="Good" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile header="Planning" tileSize="S"
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent id="planningCount" value="0"
+                                        icon="sap-icon://pending" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <IconTabBar id="statusTabBar" select=".onStatusTabSelect"
+                expandable="false" class="sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter showAll="true" text="All" key=""/>
+                    <IconTabSeparator/>
+                    <IconTabFilter text="In Progress" key="In Progress" icon="sap-icon://status-in-process" iconColor="Critical"/>
+                    <IconTabFilter text="Planning"    key="Planning"    icon="sap-icon://pending"            iconColor="Default"/>
+                    <IconTabFilter text="Completed"   key="Completed"   icon="sap-icon://accept"             iconColor="Positive"/>
+                </items>
+                <content>
                     <Table id="projectTable"
                         items="{projects>/projects}"
                         sticky="ColumnHeaders,HeaderToolbar"
+                        growing="true"
+                        growingThreshold="10"
+                        alternateRowColors="true"
                         class="sapUiResponsiveContentPadding">
                         <headerToolbar>
-                            <Toolbar>
-                                <Title text="Project List" level="H4"/>
+                            <OverflowToolbar style="Clear">
+                                <Title id="projectTableTitle" text="Projects" level="H4"/>
                                 <ToolbarSpacer/>
                                 <SearchField
-                                    width="16rem"
-                                    placeholder="Filter by Status"
-                                    liveChange=".onStatusSearch"/>
-                            </Toolbar>
+                                    width="18rem"
+                                    placeholder="Search projects..."
+                                    liveChange=".onProjectSearch"/>
+                            </OverflowToolbar>
                         </headerToolbar>
                         <columns>
                             <Column width="8rem"><Text text="Project ID"/></Column>
                             <Column><Text text="Project Name"/></Column>
-                            <Column><Text text="Status"/></Column>
-                            <Column><Text text="Department"/></Column>
-                            <Column><Text text="Lead"/></Column>
-                            <Column><Text text="Due Date"/></Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Status"/></Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Department"/></Column>
+                            <Column minScreenWidth="Desktop" demandPopin="true"><Text text="Due Date"/></Column>
                         </columns>
                         <items>
                             <ColumnListItem>
                                 <cells>
                                     <ObjectIdentifier title="{projects>projectId}"/>
-                                    <Text text="{projects>projectName}"/>
+                                    <ObjectIdentifier title="{projects>projectName}" titleActive="false"/>
                                     <ObjectStatus
                                         text="{projects>status}"
-                                        state="{= ${projects>status} === 'Completed' ? 'Success' : ${projects>status} === 'In Progress' ? 'Warning' : 'Information' }"/>
+                                        inverted="true"
+                                        state="{= ${projects>status} === 'Completed'  ? 'Success'     :
+                                                   ${projects>status} === 'In Progress'? 'Warning'     : 'Information' }"/>
                                     <Text text="{projects>team}"/>
-                                    <Text text="{projects>lead}"/>
                                     <Text text="{projects>dueDate}"/>
                                 </cells>
                             </ColumnListItem>
                         </items>
                     </Table>
-                </VBox>
-            </HBox>
-        </content>
-    </Page>
+                </content>
+            </IconTabBar>
+        </f:content>
+
+    </f:DynamicPage>
 </mvc:View>

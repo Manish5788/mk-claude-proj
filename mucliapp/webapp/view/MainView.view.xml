@@ -1,41 +1,133 @@
 <mvc:View controllerName="mucliapp.controller.MainView"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}" backgroundDesign="Solid">
-        <content>
-            <HBox class="employeePageContent">
-                <VBox class="employeeTableWrapper">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    displayBlock="true">
+
+    <f:DynamicPage id="dynamicPage" headerExpanded="true" toggleHeaderOnTitleClick="true" fitContent="true">
+
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Employee Directory" level="H2"/>
+                </f:heading>
+                <f:snappedContent>
+                    <FlexBox wrap="Wrap">
+                        <ObjectAttribute title="Total" text="25 Employees" class="sapUiSmallMarginEnd"/>
+                        <ObjectAttribute title="Departments" text="8"/>
+                    </FlexBox>
+                </f:snappedContent>
+                <f:actions>
+                    <Button text="Add Employee" icon="sap-icon://add" type="Emphasized"/>
+                    <Button icon="sap-icon://excel-attachment" tooltip="Export to Excel"/>
+                </f:actions>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <FlexBox wrap="Wrap" class="sapUiSmallMargin">
+                    <GenericTile header="Total Employees" subheader="All departments"
+                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent value="25" icon="sap-icon://group" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile header="Engineering" subheader="8 members"
+                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent value="8" icon="sap-icon://laptop" valueColor="Good" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile header="Active Projects" subheader="In Progress"
+                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent value="28" icon="sap-icon://project-definition-triangle" valueColor="Good" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile header="Departments" subheader="Across company"
+                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent value="8" icon="sap-icon://org-chart" withMargin="false"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <IconTabBar id="departmentTabBar" select=".onDepartmentTabSelect"
+                expandable="false" class="sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter showAll="true" text="All" key=""/>
+                    <IconTabSeparator/>
+                    <IconTabFilter text="Engineering"     key="Engineering"     icon="sap-icon://laptop"/>
+                    <IconTabFilter text="Marketing"       key="Marketing"       icon="sap-icon://customer"/>
+                    <IconTabFilter text="Finance"         key="Finance"         icon="sap-icon://money-bills"/>
+                    <IconTabFilter text="Sales"           key="Sales"           icon="sap-icon://sales-order"/>
+                    <IconTabFilter text="Operations"      key="Operations"      icon="sap-icon://factory"/>
+                    <IconTabFilter text="HR"              key="Human Resources" icon="sap-icon://group"/>
+                    <IconTabFilter text="Product"         key="Product"         icon="sap-icon://product"/>
+                    <IconTabFilter text="Legal"           key="Legal"           icon="sap-icon://official-service"/>
+                </items>
+                <content>
                     <Table id="employeeTable"
                         items="{employees>/employees}"
                         sticky="ColumnHeaders,HeaderToolbar"
+                        growing="true"
+                        growingThreshold="10"
+                        alternateRowColors="true"
                         class="sapUiResponsiveContentPadding">
                         <headerToolbar>
-                            <Toolbar>
-                                <Title text="Employee List" level="H4"/>
+                            <OverflowToolbar style="Clear">
+                                <Title id="tableTitle" text="All Employees (25)" level="H4"/>
                                 <ToolbarSpacer/>
                                 <SearchField
-                                    width="16rem"
-                                    placeholder="Filter by Department"
-                                    liveChange=".onDepartmentSearch"/>
-                            </Toolbar>
+                                    width="18rem"
+                                    placeholder="Search by name or department..."
+                                    liveChange=".onSearch"/>
+                            </OverflowToolbar>
                         </headerToolbar>
                         <columns>
-                            <Column width="10rem"><Text text="Employee ID"/></Column>
+                            <Column width="9rem"><Text text="Employee ID"/></Column>
                             <Column><Text text="Name"/></Column>
-                            <Column><Text text="Department"/></Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Department"/></Column>
                         </columns>
                         <items>
                             <ColumnListItem type="Navigation" press=".onEmployeePress">
                                 <cells>
                                     <ObjectIdentifier title="{employees>employeeId}"/>
-                                    <Text text="{employees>name}"/>
-                                    <Text text="{employees>department}"/>
+                                    <ObjectIdentifier title="{employees>name}" titleActive="false"/>
+                                    <ObjectStatus
+                                        text="{employees>department}"
+                                        inverted="true"
+                                        state="{= ${employees>department} === 'Engineering'    ? 'Success'     :
+                                                   ${employees>department} === 'Finance'       ? 'Warning'     :
+                                                   ${employees>department} === 'Legal'         ? 'Error'       :
+                                                   ${employees>department} === 'Sales'         ? 'Information' : 'None' }"/>
                                 </cells>
                             </ColumnListItem>
                         </items>
                     </Table>
-                </VBox>
-            </HBox>
-        </content>
-    </Page>
+                </content>
+            </IconTabBar>
+        </f:content>
+
+    </f:DynamicPage>
 </mvc:View>

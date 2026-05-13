@@ -7,27 +7,47 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("mucliapp.controller.MainView", {
+        _sCurrentDeptKey: "",
+
         onInit: function () {
             var oModel = new JSONModel(sap.ui.require.toUrl("mucliapp/model/employees.json"));
             this.getView().setModel(oModel, "employees");
         },
 
         onEmployeePress: function (oEvent) {
-            var oItem = oEvent.getSource();
-            var sEmployeeId = oItem.getBindingContext("employees").getProperty("employeeId");
+            var sEmployeeId = oEvent.getSource().getBindingContext("employees").getProperty("employeeId");
             this.getOwnerComponent().getRouter().navTo("RouteProjectView", { employeeId: sEmployeeId });
         },
 
-        onDepartmentSearch: function (oEvent) {
-            var sQuery = oEvent.getParameter("newValue");
-            var oTable = this.byId("employeeTable");
-            var oBinding = oTable.getBinding("items");
+        onDepartmentTabSelect: function (oEvent) {
+            this._sCurrentDeptKey = oEvent.getParameter("key");
+            this._applyFilters("");
+            var sLabel = this._sCurrentDeptKey || "All";
+            this.byId("tableTitle").setText((sLabel === "All" ? "All" : sLabel) + " Employees");
+        },
 
-            var aFilters = sQuery
-                ? [new Filter("department", FilterOperator.Contains, sQuery)]
-                : [];
+        onSearch: function (oEvent) {
+            this._applyFilters(oEvent.getParameter("newValue"));
+        },
 
-            oBinding.filter(aFilters);
+        _applyFilters: function (sQuery) {
+            var aFilters = [];
+
+            if (this._sCurrentDeptKey) {
+                aFilters.push(new Filter("department", FilterOperator.EQ, this._sCurrentDeptKey));
+            }
+
+            if (sQuery) {
+                aFilters.push(new Filter({
+                    filters: [
+                        new Filter("name", FilterOperator.Contains, sQuery),
+                        new Filter("department", FilterOperator.Contains, sQuery)
+                    ],
+                    and: false
+                }));
+            }
+
+            this.byId("employeeTable").getBinding("items").filter(aFilters);
         }
     });
 });

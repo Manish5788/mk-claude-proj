@@ -1,18 +1,27 @@
-/* Employee table page layout */
-.employeePageContent {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 1.5rem;
-    background-color: #f5f6f7;
-    min-height: 100%;
-    box-sizing: border-box;
+/* Remove old fixed-width wrapper — DynamicPage handles layout */
+.employeePageContent,
+.employeeTableWrapper {
+    display: block;
 }
 
-.employeeTableWrapper {
-    width: 100%;
-    max-width: 900px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
+/* Ensure DynamicPage fills the full viewport height */
+.sapFDynamicPage {
+    height: 100%;
+}
+
+/* Tighten up tile row spacing */
+.sapMGT.sapMGTSizeS {
+    min-width: 9rem;
+}
+
+/* Alternate row subtle background already provided by alternateRowColors,
+   but boost the table header separator */
+.sapMListTblHeader {
+    border-bottom: 2px solid var(--sapList_BorderColor, #e5e5e5);
+}
+
+/* ObjectStatus inverted badges — slightly rounder corners for a chip look */
+.sapMObjStatusInverted .sapMObjStatusText {
+    border-radius: 0.75rem;
+    padding: 0.125rem 0.5rem;
 }
