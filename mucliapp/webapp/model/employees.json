@@ -1,9 +1,29 @@
 {
   "employees": [
-    { "employeeId": "E001", "name": "Alice Johnson",  "department": "Engineering" },
-    { "employeeId": "E002", "name": "Bob Smith",      "department": "Marketing" },
-    { "employeeId": "E003", "name": "Carol Davis",    "department": "Human Resources" },
-    { "employeeId": "E004", "name": "David Lee",      "department": "Finance" },
-    { "employeeId": "E005", "name": "Eva Martinez",   "department": "Engineering" }
+    { "employeeId": "E001", "name": "Alice Johnson",   "department": "Engineering" },
+    { "employeeId": "E002", "name": "Bob Smith",       "department": "Marketing" },
+    { "employeeId": "E003", "name": "Carol Davis",     "department": "Human Resources" },
+    { "employeeId": "E004", "name": "David Lee",       "department": "Finance" },
+    { "employeeId": "E005", "name": "Eva Martinez",    "department": "Engineering" },
+    { "employeeId": "E006", "name": "Frank Wilson",    "department": "Sales" },
+    { "employeeId": "E007", "name": "Grace Kim",       "department": "Engineering" },
+    { "employeeId": "E008", "name": "Henry Brown",     "department": "Finance" },
+    { "employeeId": "E009", "name": "Irene Chen",      "department": "Marketing" },
+    { "employeeId": "E010", "name": "James Taylor",    "department": "Operations" },
+    { "employeeId": "E011", "name": "Karen White",     "department": "Legal" },
+    { "employeeId": "E012", "name": "Liam Harris",     "department": "Engineering" },
+    { "employeeId": "E013", "name": "Mia Clark",       "department": "Product" },
+    { "employeeId": "E014", "name": "Nathan Lewis",    "department": "Sales" },
+    { "employeeId": "E015", "name": "Olivia Walker",   "department": "Human Resources" },
+    { "employeeId": "E016", "name": "Peter Hall",      "department": "Operations" },
+    { "employeeId": "E017", "name": "Quinn Allen",     "department": "Engineering" },
+    { "employeeId": "E018", "name": "Rachel Young",    "department": "Marketing" },
+    { "employeeId": "E019", "name": "Samuel King",     "department": "Finance" },
+    { "employeeId": "E020", "name": "Tina Scott",      "department": "Product" },
+    { "employeeId": "E021", "name": "Umar Adams",      "department": "Engineering" },
+    { "employeeId": "E022", "name": "Vera Nelson",     "department": "Legal" },
+    { "employeeId": "E023", "name": "William Carter",  "department": "Sales" },
+    { "employeeId": "E024", "name": "Xena Mitchell",   "department": "Operations" },
+    { "employeeId": "E025", "name": "Yusuf Perez",     "department": "Engineering" }
   ]
 }

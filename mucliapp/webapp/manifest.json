@@ -79,7 +79,7 @@
                 },
                 {
                     "name": "RouteProjectView",
-                    "pattern": "projects",
+                    "pattern": "projects/{employeeId}",
                     "target": [
                         "TargetProjectView"
                     ]

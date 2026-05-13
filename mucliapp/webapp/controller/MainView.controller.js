@@ -12,8 +12,10 @@ sap.ui.define([
             this.getView().setModel(oModel, "employees");
         },
 
-        onNavToProjects: function () {
-            this.getOwnerComponent().getRouter().navTo("RouteProjectView");
+        onEmployeePress: function (oEvent) {
+            var oItem = oEvent.getSource();
+            var sEmployeeId = oItem.getBindingContext("employees").getProperty("employeeId");
+            this.getOwnerComponent().getRouter().navTo("RouteProjectView", { employeeId: sEmployeeId });
         },
 
         onDepartmentSearch: function (oEvent) {
