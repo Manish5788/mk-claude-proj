@@ -69,42 +69,42 @@
                         <uxap:blocks>
                             <FlexBox wrap="Wrap">
                                 <GenericTile header="Total Employees" subheader="All departments"
-                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                     <tileContent><TileContent><content>
                                         <NumericContent value="{overview>/totalEmployees}"
                                             icon="sap-icon://group" withMargin="false"/>
                                     </content></TileContent></tileContent>
                                 </GenericTile>
                                 <GenericTile header="Total Projects" subheader="All statuses"
-                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                     <tileContent><TileContent><content>
                                         <NumericContent value="{overview>/totalProjects}"
                                             icon="sap-icon://project-definition-triangle" withMargin="false"/>
                                     </content></TileContent></tileContent>
                                 </GenericTile>
                                 <GenericTile header="Active Projects" subheader="In Progress"
-                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                     <tileContent><TileContent><content>
                                         <NumericContent value="{overview>/activeProjects}"
                                             icon="sap-icon://status-in-process" valueColor="Critical" withMargin="false"/>
                                     </content></TileContent></tileContent>
                                 </GenericTile>
                                 <GenericTile header="Completed" subheader="This period"
-                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                     <tileContent><TileContent><content>
                                         <NumericContent value="{overview>/completedProjects}"
                                             icon="sap-icon://accept" valueColor="Good" withMargin="false"/>
                                     </content></TileContent></tileContent>
                                 </GenericTile>
                                 <GenericTile header="In Planning" subheader="Upcoming"
-                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                     <tileContent><TileContent><content>
                                         <NumericContent value="{overview>/planningProjects}"
                                             icon="sap-icon://pending" withMargin="false"/>
                                     </content></TileContent></tileContent>
                                 </GenericTile>
                                 <GenericTile header="Departments" subheader="Across company"
-                                    tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                     <tileContent><TileContent><content>
                                         <NumericContent value="{overview>/totalDepartments}"
                                             icon="sap-icon://org-chart" withMargin="false"/>

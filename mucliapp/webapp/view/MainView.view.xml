@@ -31,7 +31,7 @@
             <f:DynamicPageHeader pinnable="true">
                 <FlexBox wrap="Wrap" class="sapUiSmallMargin">
                     <GenericTile header="Total Employees" subheader="All departments"
-                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
                                 <content>
@@ -41,7 +41,7 @@
                         </tileContent>
                     </GenericTile>
                     <GenericTile header="Engineering" subheader="8 members"
-                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
                                 <content>
@@ -51,7 +51,7 @@
                         </tileContent>
                     </GenericTile>
                     <GenericTile header="Active Projects" subheader="In Progress"
-                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
                                 <content>
@@ -61,7 +61,7 @@
                         </tileContent>
                     </GenericTile>
                     <GenericTile header="Departments" subheader="Across company"
-                        tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
                                 <content>

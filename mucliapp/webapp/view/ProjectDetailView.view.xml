@@ -89,22 +89,22 @@
                                 </Panel>
                                 <!-- KPI Tiles -->
                                 <FlexBox wrap="Wrap">
-                                    <GenericTile id="budgetTile" header="Budget" subheader="Allocated" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <GenericTile id="budgetTile" header="Budget" subheader="Allocated" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                         <tileContent><TileContent><content>
                                             <NumericContent id="budgetValue" value="0" scale="K" unit="$" icon="sap-icon://money-bills" withMargin="false"/>
                                         </content></TileContent></tileContent>
                                     </GenericTile>
-                                    <GenericTile header="Days Remaining" subheader="Until due date" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <GenericTile header="Days Remaining" subheader="Until due date" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                         <tileContent><TileContent><content>
                                             <NumericContent id="daysRemaining" value="0" icon="sap-icon://appointment-2" withMargin="false"/>
                                         </content></TileContent></tileContent>
                                     </GenericTile>
-                                    <GenericTile header="Team Size" subheader="Members assigned" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <GenericTile header="Team Size" subheader="Members assigned" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                         <tileContent><TileContent><content>
                                             <NumericContent id="teamSizeValue" value="0" icon="sap-icon://group" withMargin="false"/>
                                         </content></TileContent></tileContent>
                                     </GenericTile>
-                                    <GenericTile header="Milestones" subheader="Completed / Total" tileSize="S" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                                    <GenericTile header="Milestones" subheader="Completed / Total" class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                                         <tileContent><TileContent><content>
                                             <NumericContent id="milestoneDone" value="0" icon="sap-icon://accept" valueColor="Good" withMargin="false"/>
                                         </content></TileContent></tileContent>

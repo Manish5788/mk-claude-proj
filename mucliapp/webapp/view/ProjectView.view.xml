@@ -30,7 +30,7 @@
                         <ObjectAttribute id="empIdAttr"   title="Employee ID"  text=""/>
                         <ObjectAttribute id="empDeptAttr" title="Department"   text=""/>
                     </VBox>
-                    <GenericTile id="totalTile" header="Total Projects" tileSize="S"
+                    <GenericTile id="totalTile" header="Total Projects"
                         class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
@@ -41,7 +41,7 @@
                             </TileContent>
                         </tileContent>
                     </GenericTile>
-                    <GenericTile header="In Progress" tileSize="S"
+                    <GenericTile header="In Progress"
                         class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
@@ -52,7 +52,7 @@
                             </TileContent>
                         </tileContent>
                     </GenericTile>
-                    <GenericTile header="Completed" tileSize="S"
+                    <GenericTile header="Completed"
                         class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
@@ -63,7 +63,7 @@
                             </TileContent>
                         </tileContent>
                     </GenericTile>
-                    <GenericTile header="Planning" tileSize="S"
+                    <GenericTile header="Planning"
                         class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
                         <tileContent>
                             <TileContent>
